@@ -1,0 +1,28 @@
+{
+  "name": "explooosion.github.io",
+  "version": "1.0.0",
+  "description": "Robby's Web",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/explooosion/explooosion.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/explooosion/explooosion.github.io/issues"
+  },
+  "homepage": "https://github.com/explooosion/explooosion.github.io#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-html-minifier2": "^1.1.8"
+  }
+}
