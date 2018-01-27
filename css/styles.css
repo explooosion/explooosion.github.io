@@ -248,6 +248,13 @@ footer {
 }
 
 @media print,
+screen and (max-height: 740px) {
+    footer {
+        top: 620px;
+    }
+}
+
+@media print,
 screen and (max-width: 960px) {
     div.wrapper {
         width: auto;
