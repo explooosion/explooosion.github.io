@@ -11,7 +11,7 @@ function css() {
 }
 
 function html() {
-    return gulp.src('./index.html')
+    return gulp.src('./*.html')
         .pipe(htmlmin({
             collapseWhitespace: true
         }))
