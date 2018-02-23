@@ -12286,12 +12286,12 @@ var Clients = function () {
             this.client.subscribe('join/' + this.master);
 
             // 開新房間
-            // this.payload = new Paho.Message(JSON.stringify({
-            //     action: 'create',
-            //     key: 'dadkfh'
-            // }))
-            // this.payload.destinationName = 'room'
-            // this.client.send(this.payload)
+            this.payload = new _pahoMqtt2.default.Message(JSON.stringify({
+                action: 'create',
+                key: 'dadkfh'
+            }));
+            this.payload.destinationName = 'room';
+            this.client.send(this.payload);
 
             // 加入房間
             this.payload = new _pahoMqtt2.default.Message(JSON.stringify({
