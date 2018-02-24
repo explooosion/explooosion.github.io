@@ -6063,8 +6063,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = {
-  gameWidth: 400,
-  gameHeight: 400,
+  gameWidth: 1000,
+  gameHeight: 600,
   // gameWidth: 640,
   // gameHeight: 640,
   localStorageName: 'nobuwebclient',
@@ -11777,7 +11777,7 @@ var _class = function (_Phaser$State) {
       //
       // load your assets
       //
-      this.load.tilemap('map', 'assets/map/map.json', null, _phaser2.default.Tilemap.TILED_JSON);
+      this.load.tilemap('map', 'assets/map/map-large.json', null, _phaser2.default.Tilemap.TILED_JSON);
       this.load.image('tiles', 'assets/map/map.png');
       this.load.spritesheet('obj', 'assets/map/map.png', 32, 32, -1, 1, 1);
       this.load.spritesheet('player', 'assets/images/player.png', 32, 32);
@@ -11864,7 +11864,7 @@ var _class = function (_Phaser$State) {
     value: function create() {
 
       // Connection
-      this.client = new _Client2.default('dadkfh');
+      this.client = new _Client2.default('abcedf');
       this.client.onConnect();
 
       // Add Map
@@ -11874,12 +11874,13 @@ var _class = function (_Phaser$State) {
       this.layer.resizeWorld();
 
       this.map.setCollisionBetween(31, 32, true, this.layer);
-      this.map.setCollisionBetween(46, 48, true, this.layer);
+      // this.map.setCollisionBetween(46, 48, true, this.layer);
+      this.map.setCollision(46);
       // this.layer.debug = true
 
       // Add Physics
       this.game.physics.startSystem(_phaser2.default.Physics.ARCADE);
-      this.game.world.setBounds(0, 0, 600, 600);
+      // this.game.world.setBounds(0, 0, 600, 600);
 
       // Add Player
       this.player = new _Player2.default({
@@ -11955,7 +11956,11 @@ var _class = function (_Phaser$State) {
         } else {
           // 直接移動座標(應該要設計提供敵人ID)
           this.enemy.children.forEach(function (enemy, index) {
-            _this2.game.physics.arcade.moveToXY(enemy, _this2.client.status.others[index].x / 10 + Math.random() * 300, _this2.client.status.others[index].y / 10 + Math.random() * 300, 50);
+            try {
+              _this2.game.physics.arcade.moveToXY(enemy, _this2.client.status.others[index].x / 10 + Math.random() * 300, _this2.client.status.others[index].y / 10 + Math.random() * 300, 50);
+            } catch (ex) {
+              console.layer('enemy move error', ex);
+            }
           });
         }
       }
@@ -12323,6 +12328,7 @@ var Clients = function () {
         value: function onSuccess() {
             console.log('onSuccess');
             this.client.subscribe('join/' + this.master);
+            // this.client.subscribe(`newplayer/${this.master}`)
             this.client.send(_Message2.default.JoinRoom(this.master));
         }
 
@@ -12370,6 +12376,7 @@ var Clients = function () {
         value: function onMessageArrived(msg) {
             var message = (0, _paho.bulidMessageObjects)(msg);
 
+            console.log(message);
             switch (message.topic) {
 
                 case 'join/' + this.master:
@@ -12379,12 +12386,14 @@ var Clients = function () {
                         this.map = message.payload.map;
 
                         // 成功加入後就不要再訂閱是否加入成功 會造成 message loop
-                        this.client.unsubscribe('join/' + this.master);
+                        // this.client.unsubscribe(`newplayer/${this.master}`)
                         this.client.subscribe('game/' + this.master + '/' + this.player);
+                        this.client.subscribe('gamedata/' + this.master);
                     } else {
-                        console.log('recreate room');
-                        this.client.send(_Message2.default.CreateRoom(this.master));
-                        this.client.send(_Message2.default.JoinRoom(this.master));
+
+                        console.log('recreate room (x)');
+                        // this.client.send(Message.CreateRoom(this.master))
+                        // this.client.send(Message.JoinRoom(this.master))
                     }
                     break;
 
@@ -12392,10 +12401,9 @@ var Clients = function () {
                     // 了解目前狀態
                     this.status = message.payload;
                     break;
-
                 default:
                     // 垃圾訊息
-                    console.log(message);
+                    // console.log(message)
                     break;
             }
         }
