@@ -12333,6 +12333,9 @@ var Clients = function () {
                     if (message.payload.result === 'success') {
                         this.player = message.payload.id;
                         this.map = message.payload.map;
+
+                        // 成功加入後就不要再訂閱是否加入成功 會造成 message loop
+                        this.client.unsubscribe('join/' + this.master);
                         this.client.subscribe('game/' + this.master + '/' + this.player);
                     } else {
                         console.log('recreate room');
