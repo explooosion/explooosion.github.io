@@ -11909,37 +11909,15 @@ var _class = function (_Phaser$State) {
       });
 
       this.game.input.onDown.add(this.move, this);
+
+      this.timer = this.game.time.create(false);
+      this.timer.loop(1000, this.updateStatus, this);
+      this.timer.start();
     }
   }, {
-    key: 'update',
-    value: function update() {
+    key: 'updateStatus',
+    value: function updateStatus() {
       var _this2 = this;
-
-      // 碰撞偵測
-      this.game.physics.arcade.collide(this.player, this.objectsUnPass);
-
-      this.game.physics.arcade.overlap(this.player, this.objectsUnPass, function (p, o) {
-        _this2.player.body.velocity.setTo(0, 0);
-      });
-
-      this.game.physics.arcade.overlap(this.player, this.objects, function (player, obj) {
-
-        // this.locationText.text = obj.name === '石礫' ? obj.name + '(打滑中)' : obj.name
-        _this2.locationText.x = _this2.player.x + 16;
-        _this2.locationText.y = _this2.player.y + 32;
-
-        _this2.player.isWalk = obj.name !== '石礫';
-      }, null, this);
-
-      // Player and Marker
-      if (this.marker !== undefined) {
-        var boundsA = this.player.getBounds();
-        var boundsB = this.marker.getBounds();
-        this.game.physics.arcade.overlap(this.player, this.marker, function (player, obj) {
-          _this2.player.body.velocity.setTo(0, 0);
-          _this2.marker.kill();
-        });
-      }
 
       // 更新狀態 FROM MQTT
       if (this.client.status) {
@@ -11952,15 +11930,56 @@ var _class = function (_Phaser$State) {
         this.locationText.text = 'HP' + this.client.status.hp;
 
         // 敵人
-        this.enemy.removeAll();
-        this.client.status.others.forEach(function (o) {
-          var enemy = new _Player2.default({
-            game: game,
-            x: o.x / 10 + Math.random() * 300,
-            y: o.y / 10 + Math.random() * 300,
-            asset: 'enemy'
+        if (this.enemy.total === 0) {
+
+          // 如果還沒增加
+          this.client.status.others.forEach(function (o) {
+            var enemy = new _Player2.default({
+              game: game,
+              x: o.x / 10 + Math.random() * 300,
+              y: o.y / 10 + Math.random() * 300,
+              asset: 'enemy'
+            });
+            _this2.enemy.add(enemy);
           });
-          _this2.enemy.add(enemy);
+        } else {
+
+          // 直接移動座標(應該要設計提供敵人ID)
+          this.client.status.others.forEach(function (o, index) {
+            var enemy = _this2.enemy.getChildAt(index);
+            _this2.game.physics.arcade.moveToXY(enemy, o.x / 10 + Math.random() * 300, o.x / 10 + Math.random() * 300, 50);
+          });
+        }
+      }
+    }
+  }, {
+    key: 'update',
+    value: function update() {
+      var _this3 = this;
+
+      // 碰撞偵測
+      this.game.physics.arcade.collide(this.player, this.objectsUnPass);
+
+      this.game.physics.arcade.overlap(this.player, this.objectsUnPass, function (p, o) {
+        _this3.player.body.velocity.setTo(0, 0);
+      });
+
+      this.game.physics.arcade.overlap(this.player, this.objects, function (player, obj) {
+
+        // this.locationText.text = obj.name === '石礫' ? obj.name + '(打滑中)' : obj.name
+        _this3.locationText.x = _this3.player.x + 16;
+        _this3.locationText.y = _this3.player.y + 32;
+
+        _this3.player.isWalk = obj.name !== '石礫';
+      }, null, this);
+
+      // Player and Marker
+      if (this.marker !== undefined) {
+        var boundsA = this.player.getBounds();
+        var boundsB = this.marker.getBounds();
+        this.game.physics.arcade.overlap(this.player, this.marker, function (player, obj) {
+          _this3.player.body.velocity.setTo(0, 0);
+          _this3.marker.kill();
         });
       }
     }
@@ -12286,12 +12305,12 @@ var Clients = function () {
             this.client.subscribe('join/' + this.master);
 
             // 開新房間
-            this.payload = new _pahoMqtt2.default.Message(JSON.stringify({
-                action: 'create',
-                key: 'dadkfh'
-            }));
-            this.payload.destinationName = 'room';
-            this.client.send(this.payload);
+            // this.payload = new Paho.Message(JSON.stringify({
+            //     action: 'create',
+            //     key: 'dadkfh'
+            // }))
+            // this.payload.destinationName = 'room'
+            // this.client.send(this.payload)
 
             // 加入房間
             this.payload = new _pahoMqtt2.default.Message(JSON.stringify({
