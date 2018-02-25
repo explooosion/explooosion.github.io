@@ -6063,8 +6063,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = {
-  gameWidth: 1240,
-  gameHeight: 1240,
+  gameWidth: 1920,
+  gameHeight: 1080,
   // gameWidth: 640,
   // gameHeight: 640,
   localStorageName: 'nobuwebclient',
@@ -11935,7 +11935,7 @@ var _class = function (_Phaser$State) {
           this.game.add.existing(this.player);
 
           // Add Camera
-          this.game.camera.follow(this.player, _phaser2.default.Camera.FOLLOW_LOCKON);
+          // this.game.camera.follow(this.player, Phaser.Camera.FOLLOW_LOCKON);
           // this.game.camera.follow(this.player, Phaser.Camera.FOLLOW_LOCKON, 0.1, 0.1);
         }
 
