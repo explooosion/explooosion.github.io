@@ -6063,8 +6063,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = {
-  gameWidth: 1000,
-  gameHeight: 600,
+  gameWidth: 1240,
+  gameHeight: 1240,
   // gameWidth: 640,
   // gameHeight: 640,
   localStorageName: 'nobuwebclient',
@@ -11874,25 +11874,12 @@ var _class = function (_Phaser$State) {
       this.layer.resizeWorld();
 
       this.map.setCollisionBetween(31, 32, true, this.layer);
-      // this.map.setCollisionBetween(46, 48, true, this.layer);
       this.map.setCollision(46);
       // this.layer.debug = true
 
       // Add Physics
       this.game.physics.startSystem(_phaser2.default.Physics.ARCADE);
       // this.game.world.setBounds(0, 0, 600, 600);
-
-      // Add Player
-      this.player = new _Player2.default({
-        game: this.game,
-        x: 200,
-        y: 200,
-        asset: 'player'
-      });
-      this.game.add.existing(this.player);
-
-      // Add Camera
-      this.game.camera.follow(this.player, _phaser2.default.Camera.FOLLOW_LOCKON, 0.1, 0.1);
 
       // Add Enemy
       this.enemy = this.game.add.group();
@@ -11932,10 +11919,32 @@ var _class = function (_Phaser$State) {
       var _this2 = this;
 
       if (this.client.status) {
-        // console.log(this.client.status)
 
+        console.log(this.client.status.others);
+
+        /** 檢查玩家是否已建立 */
+        if (this.player === undefined) {
+
+          // Add Player
+          this.player = new _Player2.default({
+            game: this.game,
+            x: this.client.status.x,
+            y: this.client.status.y,
+            asset: 'player'
+          });
+          this.game.add.existing(this.player);
+
+          // Add Camera
+          this.game.camera.follow(this.player, _phaser2.default.Camera.FOLLOW_LOCKON);
+          // this.game.camera.follow(this.player, Phaser.Camera.FOLLOW_LOCKON, 0.1, 0.1);
+        }
+
+        /** 檢查玩家是否與新座標同一個點 */
         if (this.player.x !== this.client.status.x && this.player.y !== this.client.status.y) {
-          this.game.physics.arcade.moveToXY(this.player, this.client.status.x / 10 + Math.random() * 300, this.client.status.y / 10 + Math.random() * 300, 50);
+          this.game.physics.arcade.moveToXY(this.player, this.client.status.x, this.client.status.y,
+          // this.client.status.x / 10 + Math.random() * 300,
+          // this.client.status.y / 10 + Math.random() * 300,
+          50);
         }
 
         this.locationText.text = 'HP' + this.client.status.hp;
@@ -11947,19 +11956,30 @@ var _class = function (_Phaser$State) {
           this.client.status.others.forEach(function (enemy) {
             var e = new _Player2.default({
               game: game,
-              x: enemy.x / 10 + Math.random() * 300,
-              y: enemy.y / 10 + Math.random() * 300,
+              x: enemy.x,
+              y: enemy.y,
+              // x: enemy.x / 10 + Math.random() * 300,
+              // y: enemy.y / 10 + Math.random() * 300,
               asset: 'enemy'
             });
             _this2.enemy.add(e);
           });
         } else {
+
           // 直接移動座標(應該要設計提供敵人ID)
           this.enemy.children.forEach(function (enemy, index) {
             try {
-              _this2.game.physics.arcade.moveToXY(enemy, _this2.client.status.others[index].x / 10 + Math.random() * 300, _this2.client.status.others[index].y / 10 + Math.random() * 300, 50);
+              if (enemy.x !== _this2.client.status.others[index].x && enemy.y !== _this2.client.status.others[index].y) {
+                // this.game.physics.arcade.moveToXY(
+                //   enemy,
+                //   this.client.status.others[index].x,
+                //   this.client.status.others[index].y,
+                //   // this.client.status.others[index].x / 10 + Math.random() * 300,
+                //   // this.client.status.others[index].y / 10 + Math.random() * 300,
+                //   50);
+              }
             } catch (ex) {
-              console.layer('enemy move error', ex);
+              console.log('enemy move error');
             }
           });
         }
@@ -11971,7 +11991,7 @@ var _class = function (_Phaser$State) {
       var _this3 = this;
 
       // 碰撞偵測
-      this.game.physics.arcade.collide(this.player, this.layer);
+      // this.game.physics.arcade.collide(this.player, this.layer)
       this.game.physics.arcade.overlap(this.player, this.layer, function (player, obj) {
         _this3.locationText.text = obj.properties.name === '石礫' ? obj.properties.name + '(打滑中)' : obj.properties.name;
         _this3.locationText.x = _this3.player.x + 16;
@@ -12327,6 +12347,7 @@ var Clients = function () {
         key: 'onSuccess',
         value: function onSuccess() {
             console.log('onSuccess');
+            this.client.send(_Message2.default.RemoveRoom(this.master));
             this.client.subscribe('join/' + this.master);
             // this.client.subscribe(`newplayer/${this.master}`)
             this.client.send(_Message2.default.JoinRoom(this.master));
@@ -12334,7 +12355,7 @@ var Clients = function () {
 
         /**
          * 連線失敗
-         * @param {訊息} message 
+         * @param {object} message 
          */
 
     }, {
@@ -12351,7 +12372,7 @@ var Clients = function () {
 
         /**
          * 連線遺失
-         * @param {回傳} responseObject 
+         * @param {object} responseObject 
          */
 
     }, {
@@ -12368,15 +12389,15 @@ var Clients = function () {
 
         /**
          * 訊息接收
-         * @param {訊息} msg 
+         * @param {string} msg 
          */
 
     }, {
         key: 'onMessageArrived',
         value: function onMessageArrived(msg) {
+
             var message = (0, _paho.bulidMessageObjects)(msg);
 
-            console.log(message);
             switch (message.topic) {
 
                 case 'join/' + this.master:
@@ -12386,14 +12407,13 @@ var Clients = function () {
                         this.map = message.payload.map;
 
                         // 成功加入後就不要再訂閱是否加入成功 會造成 message loop
-                        // this.client.unsubscribe(`newplayer/${this.master}`)
+                        this.client.unsubscribe('join/' + this.master);
                         this.client.subscribe('game/' + this.master + '/' + this.player);
-                        this.client.subscribe('gamedata/' + this.master);
                     } else {
 
-                        console.log('recreate room (x)');
-                        // this.client.send(Message.CreateRoom(this.master))
-                        // this.client.send(Message.JoinRoom(this.master))
+                        console.log('recreate room');
+                        this.client.send(_Message2.default.CreateRoom(this.master));
+                        this.client.send(_Message2.default.JoinRoom(this.master));
                     }
                     break;
 
@@ -12435,6 +12455,7 @@ var Message = {
 
     /**
      * 加入房間
+     * @param {string} master 
      */
     JoinRoom: function JoinRoom(master) {
         this.payload = new _pahoMqtt2.default.Message(JSON.stringify({
@@ -12449,6 +12470,7 @@ var Message = {
 
     /**
      * 開新房間
+     * @param {string} master 
      */
     CreateRoom: function CreateRoom(master) {
         this.payload = new _pahoMqtt2.default.Message(JSON.stringify({
@@ -12458,9 +12480,37 @@ var Message = {
         this.payload.destinationName = 'room';
         this.payload.qos = 0;
         return this.payload;
+    },
+
+
+    /**
+     * 刪除角色
+     * @param {string} master 
+     * @param {string} player 
+     */
+    RemovePlayer: function RemovePlayer(master, player) {
+        this.payload = new _pahoMqtt2.default.Message(JSON.stringify({
+            id: player
+        }));
+        this.payload.destinationName = 'delete/' + master;
+        this.payload.qos = 0;
+        return this.payload;
+    },
+
+
+    /**
+     * 刪除角色
+     * @param {string} master
+     */
+    RemoveRoom: function RemoveRoom(master) {
+        this.payload = new _pahoMqtt2.default.Message(JSON.stringify({
+            key: master
+        }));
+        this.payload.destinationName = 'delete_room';
+        this.payload.qos = 0;
+        return this.payload;
     }
 };
-
 exports.default = Message;
 
 /***/ }),
