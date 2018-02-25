@@ -11950,7 +11950,7 @@ var _class = function (_Phaser$State) {
         this.locationText.text = 'HP' + this.client.status.hp;
 
         // 敵人
-        if (this.enemy.total === 0 && this.client.status.others) {
+        if (this.enemy.total !== this.client.status.others.length) {
 
           // 如果還沒增加
           this.client.status.others.forEach(function (enemy) {
