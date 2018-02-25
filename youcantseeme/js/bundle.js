@@ -16689,28 +16689,28 @@ var _class = function (_Phaser$State) {
                 align: 'center'
             };
 
-            this.text = this.add.text(this.game.world.centerX, this.game.world.centerY, '- Nobu Web Client -\n \u842C\u4EBA\u570B\u6230', style);
+            this.text = this.add.text(this.game.world.centerX, this.game.world.centerY, '- Nobu Web Client -\n \u842C\u4EBA\u570B\u6230 \n 0557', style);
             this.text.anchor.set(0.5, 0.8);
         }
     }, {
         key: 'up',
         value: function up() {
-            console.log('button up', arguments);
+            // console.log('button up', arguments);
         }
     }, {
         key: 'over',
         value: function over() {
-            console.log('button over');
+            // console.log('button over');
         }
     }, {
         key: 'out',
         value: function out() {
-            console.log('button out');
+            // console.log('button out');
         }
     }, {
         key: 'actionOnClick',
         value: function actionOnClick() {
-            console.log('button click');
+            // console.log('button click')
             this.state.start('Game');
         }
     }]);
@@ -16881,9 +16881,12 @@ var _class = function (_Phaser$State) {
           this.game.camera.follow(this.player, _phaser2.default.Camera.FOLLOW_LOCKON, 0.1, 0.1);
         }
 
+        console.log('player x:' + this.player.x + ', client x:' + this.client.status.x);
+
         /** 檢查玩家是否與新座標同一個點 */
         if (this.player.x !== this.client.status.x && this.player.y !== this.client.status.y) {
           console.log('move');
+          // this.player.body.velocity.setTo(0, 0)
           this.game.physics.arcade.moveToXY(this.player, this.client.status.x, this.client.status.y, 500);
           console.log('update player: x' + this.client.status.x + ' y' + this.client.status.y);
         } else {
@@ -16940,6 +16943,8 @@ var _class = function (_Phaser$State) {
             });
           });
         }
+      } else {
+        console.log('error status', this.client.status);
       }
     }
   }, {
@@ -16949,12 +16954,12 @@ var _class = function (_Phaser$State) {
 
       // 碰撞偵測
       // this.game.physics.arcade.collide(this.player, this.layer)
-      this.game.physics.arcade.overlap(this.player, this.layer, function (player, obj) {
-        _this3.locationText.text = obj.properties.name === '石礫' ? obj.properties.name + '(打滑中)' : obj.properties.name;
-        _this3.locationText.x = _this3.player.x + 16;
-        _this3.locationText.y = _this3.player.y + 32;
-        _this3.player.isWalk = obj.properties.name !== '石礫';
-      }, null, this);
+      // this.game.physics.arcade.overlap(this.player, this.layer, (player, obj) => {
+      //   this.locationText.text = obj.properties.name === '石礫' ? obj.properties.name + '(打滑中)' : obj.properties.name
+      //   this.locationText.x = this.player.x + 16
+      //   this.locationText.y = this.player.y + 32
+      //   this.player.isWalk = obj.properties.name !== '石礫'
+      // }, null, this)
 
       // Player and Marker
       if (this.marker !== undefined) {
@@ -16992,6 +16997,8 @@ var _class = function (_Phaser$State) {
       // this.game.physics.arcade.moveToXY(this.player, point.x, point.y, 500);
       // this.client.client.send(Message.MovePlayer(this.client.master, this.client.player, point.x, point.y))
       this.client.onPlayerMoving(this.client.master, this.client.player, point.x, point.y);
+      console.log('click x:' + point.x + ', y:' + point.y);
+      console.log(this.client.status);
       this.marker.x = point.x;
       this.marker.y = point.y;
     }
@@ -17362,7 +17369,8 @@ var Clients = function () {
 
             var message = (0, _paho.bulidMessageObjects)(msg);
 
-            console.log(message.payload);
+            // console.log(message.payload)
+
             switch (message.topic) {
 
                 case 'join/' + this.master:
