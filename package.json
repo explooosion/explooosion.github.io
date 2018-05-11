@@ -1,6 +1,6 @@
 {
   "name": "explooosion.github.io",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Robby's Web",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/explooosion/explooosion.github.io.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Robby",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/explooosion/explooosion.github.io/issues"
