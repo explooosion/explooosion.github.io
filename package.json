@@ -1,19 +1,24 @@
 {
   "name": "explooosion.github.io",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Robby's Web",
   "main": "index.js",
   "scripts": {
-    "gulp": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gulp": "gulp"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/explooosion/explooosion.github.io.git"
   },
-  "keywords": [],
+  "keywords": [
+    "web",
+    "resume",
+    "robby",
+    "explooosion",
+    "blog"
+  ],
   "author": "Robby",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/explooosion/explooosion.github.io/issues"
   },
