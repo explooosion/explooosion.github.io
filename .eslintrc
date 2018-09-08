@@ -1,0 +1,6 @@
+{
+  "extends": "umi",
+  "rules": {
+    "no-unused-vars": [0]
+  }
+}

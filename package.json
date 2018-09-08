@@ -1,14 +1,20 @@
 {
   "name": "explooosion.github.io",
-  "version": "1.2.4",
   "description": "Robby's Web",
-  "main": "index.js",
+  "version": "1.2.5",
   "scripts": {
-    "gulp": "gulp"
+    "start": "roadhog server",
+    "build": "roadhog build",
+    "lint": "eslint --ext .js src test",
+    "precommit": "npm run lint"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/explooosion/explooosion.github.io.git"
+    "url": "https://github.com/explooosion/explooosion.github.io"
+  },
+  "author": {
+    "name": "Robby",
+    "email": "ta7382@gmail.com"
   },
   "keywords": [
     "web",
@@ -17,17 +23,30 @@
     "explooosion",
     "blog"
   ],
-  "author": "Robby",
   "license": "MIT",
+  "homepage": "https://github.com/explooosion/explooosion.github.io",
   "bugs": {
     "url": "https://github.com/explooosion/explooosion.github.io/issues"
   },
-  "homepage": "https://github.com/explooosion/explooosion.github.io#readme",
-  "dependencies": {},
+  "dependencies": {
+    "dva": "^2.3.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-intl": "^2.4.0"
+  },
   "devDependencies": {
-    "gulp": "^4.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-cssmin": "^0.2.0",
-    "gulp-html-minifier2": "^1.1.8"
+    "babel-plugin-dva-hmr": "^0.3.2",
+    "copy-webpack-plugin": "^4.5.2",
+    "eslint": "^4.14.0",
+    "eslint-config-umi": "^0.1.1",
+    "eslint-plugin-flowtype": "^2.34.1",
+    "eslint-plugin-import": "^2.6.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "husky": "^0.12.0",
+    "node-sass": "^4.9.0",
+    "redbox-react": "^1.4.3",
+    "roadhog": "^2.0.0",
+    "sass-loader": "^7.0.3"
   }
 }

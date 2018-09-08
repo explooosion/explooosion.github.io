@@ -1,0 +1,17 @@
+.wrapper {
+  width: 860px;
+  margin: 0 auto;
+
+  .sel-lang {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+  }
+}
+
+@media print, screen and (max-width: 960px) {
+  div.wrapper {
+    width: auto;
+    margin: 0;
+  }
+}
