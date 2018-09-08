@@ -13,5 +13,5 @@ export default {
   ignoreMomentLocale: true,
   disableDynamicImport: true,
   publicPath: '', // do not use '/' , prod will gg
-  hash: true, // http://localhost:8000/#/,
+  // hash: true, // http://localhost:8000/#/,
 }
