@@ -3,6 +3,10 @@ import { connect } from 'dva'
 import styles from './Section.scss'
 import { injectIntl, FormattedMessage } from 'react-intl'
 
+import Intro from '../components/Intro';
+import Work from '../components/Work';
+import Skill from '../components/Skill';
+
 class Section extends React.Component {
   constructor(props, context) {
     super(props, context)
@@ -15,71 +19,11 @@ class Section extends React.Component {
 
     return (
       <section className={styles.section}>
-        <p>
-          <a rel="noopener noreferrer" target="_blank" href="https://github.com/2016rshah/githubchart-api">
-            <img src="https://ghchart.rshah.org/409ba5/explooosion" alt="Robby's Github chart" title="Robby's Github chart" />
-          </a>
-        </p>
+        <Intro />
         <hr />
-        <h1 className="tracking-in-contract-bck">Hi !</h1>
-        <p dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: 'intl.intro' }) }}></p>
-
+        <Work />
         <hr />
-
-        <h2 className="fade-in"><i className="fa fa-paper-plane"></i>&nbsp; 經歷</h2>
-        <ul className="fade-in">
-          <li>
-            <h3 style={{ 'lineHeight': '25px' }}>格 <i className="fa fa-circle-o"></i> <i className="fa fa-circle-o"></i> <i className="fa fa-circle-o"></i>
-              <i className="fa fa-circle-o"></i> <i className="fa fa-circle-o"></i> 有限公司&nbsp;
-              <br /><tt className="chinese">前端工程師</tt>
-            </h3>
-            <p>參與敏捷開發，撰寫網頁遊戲入口平台，使用 AngularJS 以及 ASP.NET MVC。 由設計師提供版面，協助同事切版或套版。</p>
-          </li>
-          <li>
-            <h3 style={{ 'lineHeight': '25px' }}>雍 <i className="fa fa-circle-o"></i> 科技股份有限公司&nbsp;
-              <br /><tt className="chinese">軟體工程師</tt>
-            </h3>
-            <p>參與政府招標或是 SBIR 計劃案，產品為 GIS 地理資訊平台導向。<br />負責網站開發或維護，使用 ASP.NET Web Forms 以 C# 或 VB 進行撰寫，進行圖層套疊。空間資料庫使用 MSSQL、PostGIS，並以 Google Map API、OpenLayers、MapGuide，進行圖資展示</p>
-          </li>
-          <li>
-            <h3 style={{ 'lineHeight': '25px' }}>開 <i className="fa fa-circle-o"></i> <i className="fa fa-circle-o"></i> <i className="fa fa-circle-o"></i> 股份有限公司&nbsp; <br /><tt className="chinese">助理工程師</tt>
-            </h3>
-            <p>資訊部門助理，協助主管撰寫IT部門 SOP 文件，以及資產管理、電腦維護、採購等。參與公司 ERP 維護，使用語言為 PHP。</p>
-          </li>
-        </ul>
-        <hr />
-        <h2 className="fade-in"><i className="fa fa-paint-brush"></i>&nbsp; 技能樹</h2>
-        <ul className="fade-in">
-          <li>
-            <h3>網頁開發<a href="https://github.com/kamranahmedse/developer-roadmap">(參考地圖)</a></h3>
-            <pre dangerouslySetInnerHTML={{
-              __html:
-                `{
-  web: {
-    Front-end: [
-      'ES6',
-      'Angular',
-      'SCSS',
-      'GoogleMapAPI',
-    ],
-    Back-end: [
-      'Node.js',
-      'ASP.NET WebForms',
-    ],
-    DevOps: [
-      'AWS(S3, EC2)',
-      'Cloudflare',
-      'Firebase',
-    ],
-    Desktop: [
-      'Electron',
-      'C# WinForm',
-    ],
-  },
-}`
-            }}></pre>
-          </li>
-        </ul>
+        <Skill />
         <hr />
         <h2 className="fade-in"><i className="fa fa-picture-o"></i>&nbsp; Side Project</h2>
         <ul className="fade-in">
