@@ -17,11 +17,11 @@ class Work extends React.Component {
 
     return (
       <div>
-        <h2 className="fade-in">
+        <h2 className={styles['fade-in']}>
           <i className="fa fa-paper-plane"></i>&nbsp;
           {intl.messages['intl.work']['title']}
         </h2>
-        <ul className="fade-in">
+        <ul className={styles['fade-in']}>
           {
             _.map(intl.messages['intl.work']['items'], (item, index) => {
               return (

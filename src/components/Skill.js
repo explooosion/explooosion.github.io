@@ -17,8 +17,8 @@ class Skill extends React.Component {
 
     return (
       <div>
-        <h2 className="fade-in"><i className="fa fa-paint-brush"></i>&nbsp; {intl.messages['intl.skill']['title']}</h2>
-        <ul className="fade-in">
+        <h2 className={styles['fade-in']}><i className="fa fa-paint-brush"></i>&nbsp; {intl.messages['intl.skill']['title']}</h2>
+        <ul className={styles['fade-in']}>
           <li>
             <h3>{intl.messages['intl.skill']['sub-title']}<a href="https://github.com/kamranahmedse/developer-roadmap">(參考地圖)</a></h3>
             <pre dangerouslySetInnerHTML={{

@@ -6,6 +6,7 @@ import { injectIntl, FormattedMessage } from 'react-intl'
 import Intro from '../components/Intro';
 import Work from '../components/Work';
 import Skill from '../components/Skill';
+import SideProject from '../components/SideProject';
 
 class Section extends React.Component {
   constructor(props, context) {
@@ -25,52 +26,7 @@ class Section extends React.Component {
         <hr />
         <Skill />
         <hr />
-        <h2 className="fade-in"><i className="fa fa-picture-o"></i>&nbsp; Side Project</h2>
-        <ul className="fade-in">
-          <li>
-            <h3>相關作品</h3>
-            <pre
-              dangerouslySetInnerHTML={{
-                __html:
-                  `{
-  web: [
-    <a href="https://github.com/EtherealCSS/etherealcss" target="_blank">'EtherealCSS'</a>,
-    <a href="http://robby570.tw/css-wish-card/" target="_blank">'CSS-Wish-Card'</a>,
-    <a href="https://github.com/explooosion/NobuMD" target="_blank">'NobuMD'</a>,
-    <a href="https://chat.robby570.tw/" target="_blank">'FirebaseChat'</a>,
-  ],
-  bot: [
-    <a href="https://github.com/explooosion/PipDiscordBOT" target="_blank">'PipDiscordBOT'</a>,
-  ],
-  exe: [
-    <a href="https://els.robby570.tw/" target="_blank">'ElswordVoice'</a>,
-    <a href="https://github.com/explooosion/Evo" target="_blank">'Evo'</a>,
-  ],
-  doc: [
-    <a href="https://remakeaonteam.github.io/AON-Developer-Guide/" target="_blank">'AON-Developer-Guide'</a>,
-  ],
-}`
-              }}>
-            </pre>
-          </li>
-          <li>
-            <h3>套件開發</h3>
-            <pre dangerouslySetInnerHTML={{
-              __html: `{
-  npm: [
-  <a href="https://www.npmjs.com/package/etherealcss" target="_blank">'etherealcss'</a>,
-  <a href="https://www.npmjs.com/package/natpp" target="_blank">'natpp'</a>,
-  <a href="https://www.npmjs.com/package/agm-direction" target="_blank">'Agm-Direction'</a>,
-  <a href="https://www.npmjs.com/package/koa-deploy" target="_blank">'koa-deploy'</a>,
-    ],
-  vscode: [
-  <a href="https://marketplace.visualstudio.com/items?itemName=robby.poe-filter" target="_blank">'POE Filter Syntax'</a>,
-  ],
-}`
-            }}>
-            </pre>
-          </li>
-        </ul>
+        <SideProject />
         <hr />
         <h2 className="fade-in"><i className="fa fa-paperclip"></i>&nbsp; 近期文章</h2>
         <ul className="fade-in">
