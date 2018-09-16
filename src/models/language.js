@@ -1,6 +1,5 @@
 import en from '../i18n/en'
 import zhTW from '../i18n/zh-tw'
-import zhCN from '../i18n/zh-cn'
 
 export default {
 
@@ -23,10 +22,8 @@ export default {
       }, {
         locale: 'zh-tw',
         messages: zhTW,
-      }, {
-        locale: 'zh-cn',
-        messages: zhCN,
-      }],
+      }
+    ],
   },
 
   subscriptions: {
