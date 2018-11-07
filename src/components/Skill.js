@@ -28,17 +28,32 @@ class Skill extends React.Component {
     Front-end: [
       'ES6',
       'Angular',
+      'React(Dva)',
+      'media query'
+      'i18n',
       'SCSS',
       'GoogleMapAPI',
     ],
     Back-end: [
       'Node.js',
+      'Express',
+      'koa2',
       'ASP.NET WebForms',
+      'JWT',
     ],
     DevOps: [
       'AWS(S3, EC2)',
       'Cloudflare',
       'Firebase',
+      'VMware EXSI',
+      'Docker',
+      'travis',
+    ],
+    DB: [
+      'MSSQL',
+      'MySQL',
+      'PostgreSQL',
+      'MongoDB',
     ],
     Desktop: [
       'Electron',

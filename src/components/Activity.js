@@ -20,11 +20,14 @@ class Activity extends React.Component {
         <h2 className={styles['fade-in']}><i className="fa fa-paperclip"></i>&nbsp; {intl.formatMessage({ id: 'intl.activity' })}</h2>
         <ul className={styles['fade-in']}>
           <li>
-            <h3>{intl.formatMessage({ id: 'intl.activity.academic' })}</h3>
+            <h3>{intl.formatMessage({ id: 'intl.activity.publication' })}</h3>
             <pre dangerouslySetInnerHTML={{
               __html: `{
   2018: [
     <a href="http://ibac-conference.org/bai/" target="_blank">'BAI Conference || Seoul, Korea'</a>,
+  ],
+  2017: [
+    <a href="https://www.tenlong.com.tw/products/9789863795599" target="_blank">'Angular2 其實可以很簡單：實務範例教學'</a>,
   ],
 }`
             }}></pre>
@@ -62,6 +65,10 @@ class Activity extends React.Component {
             <h3>{intl.formatMessage({ id: 'intl.activity.event' })}</h3>
             <pre dangerouslySetInnerHTML={{
               __html: `{
+  2018: [
+    <a href="https://www.accupass.com/event/1710260630563716620400" target="_blank">'全國大專校院資訊應用服務創新競賽
+      -企業數位轉型與雲端系統創新應用組'</a>,
+  ],
   2017: [
     <a href="https://www.accupass.com/event/1710260630563716620400" target="_blank">'2017 新竹黑客松'</a> - <a href="https://github.com/explooosion/HsinchuHackathon" target="_blank">GitHub</a>,
     <a href="https://www.accupass.com/event/1704140234301547836531" target="_blank">'2017 嘉義黑蚵松'</a> - <a href="https://github.com/explooosion/ChiayiHackathon" target="_blank">GitHub</a>,

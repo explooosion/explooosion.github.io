@@ -69,7 +69,7 @@ web: {
   'intl.blog': '近期文章',
   'intl.blog.dotblog': '點部落',
   'intl.activity': '活動參與',
-  'intl.activity.academic': '學術研討會',
+  'intl.activity.publication': '著作發表',
   'intl.activity.technical': '技術研討會',
   'intl.activity.event': '活動比賽',
   'intl.analysis': '綜合分析',

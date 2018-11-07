@@ -70,7 +70,7 @@ const en_US = { // eslint-disable-line
   'intl.blog': 'Blogs',
   'intl.blog.dotblog': 'Dot Blog',
   'intl.activity': 'Activity Participation',
-  'intl.activity.academic': 'Academic seminar',
+  'intl.activity.publication': 'Publication',
   'intl.activity.technical': 'Technical seminar',
   'intl.activity.event': 'Event Competition',
   'intl.analysis': 'Analysis',
