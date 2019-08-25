@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ba341b331881ebfb55949de4365d395c",
+    "revision": "f2ae483775575e9a438582c964645426",
     "url": "/explooosion/explooosion.github.io/index.html"
   },
   {
-    "revision": "499cf7a3d83746d79e40",
-    "url": "/explooosion/explooosion.github.io/static/css/2.d9d1eee2.chunk.css"
+    "revision": "98718bd6609f2c671abb",
+    "url": "/explooosion/explooosion.github.io/static/css/2.ee41023c.chunk.css"
   },
   {
-    "revision": "f86f8763cd8d621e33d0",
-    "url": "/explooosion/explooosion.github.io/static/css/main.0d6b3247.chunk.css"
+    "revision": "f2c31bb1f808ccace36d",
+    "url": "/explooosion/explooosion.github.io/static/css/main.d0fd0fb7.chunk.css"
   },
   {
-    "revision": "499cf7a3d83746d79e40",
+    "revision": "98718bd6609f2c671abb",
     "url": "/explooosion/explooosion.github.io/static/js/2.7d3892cd.chunk.js"
   },
   {
-    "revision": "f86f8763cd8d621e33d0",
-    "url": "/explooosion/explooosion.github.io/static/js/main.e4ef69d8.chunk.js"
+    "revision": "f2c31bb1f808ccace36d",
+    "url": "/explooosion/explooosion.github.io/static/js/main.5f1dfbda.chunk.js"
   },
   {
     "revision": "ab1ad497bd62046a7f18",
