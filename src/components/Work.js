@@ -1,29 +1,29 @@
-import React from 'react'
-import { connect } from 'dva'
-import { injectIntl, FormattedMessage } from 'react-intl'
-import styles from './Work.scss'
+/* eslint-disable react/no-danger */
+/* eslint-disable jsx-a11y/control-has-associated-label */
+import React, { Component } from 'react';
+import './Work.scss';
+import { withTranslation } from 'react-i18next';
+import { connect } from 'react-redux';
+import { FaPaperPlane } from 'react-icons/fa';
+import _ from 'lodash';
 
-import _ from 'lodash'
-
-class Work extends React.Component {
-  constructor(props, context) {
-    super(props, context)
-    this.dispatch = props.dispatch
-    this.state = {}
+class Work extends Component {
+  constructor(props) {
+    super(props);
+    this.t = this.props.t;
+    this.i18n = this.props.i18n;
   }
 
   render() {
-    const { intl } = this.props
-
     return (
-      <div>
-        <h2 className={styles['fade-in']}>
-          <i className="fa fa-paper-plane"></i>&nbsp;
-          {intl.messages['intl.work']['title']}
+      <div id='work'>
+        <h2 className='fade-in'>
+          <FaPaperPlane />&nbsp;
+          {this.t('work').title}
         </h2>
-        <ul className={styles['fade-in']}>
+        <ul className='fade-in'>
           {
-            _.map(intl.messages['intl.work']['items'], (item, index) => {
+            _.map(this.t('work').items, (item, index) => {
               return (
                 <li key={index}>
                   <h3
@@ -31,7 +31,7 @@ class Work extends React.Component {
                     dangerouslySetInnerHTML={{ __html: item.name }}
                   >
                   </h3>
-                  <h3><tt className="chinese">{item.job}</tt></h3>
+                  <h3><tt className='chinese'>{item.job}</tt></h3>
                   <p>{item.description}</p>
                 </li>
               )
@@ -39,14 +39,15 @@ class Work extends React.Component {
           }
         </ul>
       </div>
-    )
+    );
   }
 }
 
 Work.propTypes = {}
 
-function mapStateToProps(state) {
-  return {}
+const mapStateToProps = state => {
+  return {
+  }
 }
 
-export default connect(mapStateToProps)(injectIntl(Work))
+export default withTranslation()(connect(mapStateToProps)(Work));

@@ -1,18 +1,27 @@
-import dva from 'dva';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 import './index.scss';
+import './i18n';
+import reducers from './reducers';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
 
-// 1. Initialize
-const app = dva();
+const store = createStore(
+  reducers,
+  applyMiddleware(thunk)
+);
 
-// 2. Plugins
-// app.use({});
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);
 
-// 3. Model
-app.model(require('./models/example').default);
-app.model(require('./models/language').default);
-
-// 4. Router
-app.router(require('./router').default);
-
-// 5. Start
-app.start('#root');
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: http://bit.ly/CRA-PWA
+serviceWorker.unregister();

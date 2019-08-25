@@ -1,88 +1,88 @@
-.header {
+@import '../scss/index';
+
+#header {
   width: 270px;
   float: left;
   position: fixed;
   -webkit-font-smoothing: subpixel-antialiased;
-}
 
-.headerIcons {
-  margin: 15px 0 20px;
+  .headerIcons {
+    margin: 15px 0 20px;
 
-  a {
-    text-decoration: none;
-    color: initial;
+    a {
+      text-decoration: none;
+      color: initial;
 
-    &:hover {
-      opacity: 0.7;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    p {
+      margin: 0 0 10px;
+    }
+
+    ul {
+      list-style: none;
+      height: 40px;
+      padding: 0;
+      background: #f4f4f4;
+      border-radius: 5px;
+      border: 1px solid #e0e0e0;
+      width: 270px;
+    }
+
+    li {
+      width: 89px;
+      float: left;
+      border-right: 1px solid #e0e0e0;
+      height: 40px;
+    }
+
+    li:first-child a {
+      border-radius: 5px 0 0 5px;
+    }
+
+    li:last-child a {
+      border-radius: 0 5px 5px 0;
+    }
+
+    ul a {
+      line-height: 1;
+      font-size: 11px;
+      color: #999;
+      display: block;
+      text-align: center;
+      padding-top: 6px;
+      height: 34px;
+    }
+
+    ul a:hover {
+      color: #999;
+    }
+
+    ul a:active {
+      background-color: #f0f0f0;
+    }
+
+    ul li + li + li {
+      border-right: none;
+      width: 89px;
+    }
+
+    ul a strong {
+      font-size: 14px;
+      display: block;
+      color: #222;
     }
   }
 
-  p {
-    margin: 0 0 10px;
-  }
-
-  ul {
-    list-style: none;
-    height: 40px;
-    padding: 0;
-    background: #f4f4f4;
-    border-radius: 5px;
-    border: 1px solid #e0e0e0;
-    width: 270px;
-  }
-
-  li {
-    width: 89px;
-    float: left;
-    border-right: 1px solid #e0e0e0;
-    height: 40px;
-  }
-
-  li:first-child a {
-    border-radius: 5px 0 0 5px;
-  }
-
-  li:last-child a {
-    border-radius: 0 5px 5px 0;
-  }
-
-  ul a {
-    line-height: 1;
-    font-size: 11px;
-    color: #999;
-    display: block;
-    text-align: center;
-    padding-top: 6px;
-    height: 34px;
-  }
-
-  ul a:hover {
-    color: #999;
-  }
-
-  ul a:active {
-    background-color: #f0f0f0;
-  }
-
-  ul li + li + li {
-    border-right: none;
-    width: 89px;
-  }
-
-  ul a strong {
-    font-size: 14px;
-    display: block;
+  strong {
     color: #222;
+    font-weight: 500;
   }
-}
 
-strong {
-  color: #222;
-  font-weight: 500;
-}
-
-@media print, screen and (max-width: 960px) {
-  .header {
+  @media print, screen and (max-width: $screen-lg) {
     float: none;
     padding-right: 320px;
     position: static;
@@ -98,10 +98,8 @@ strong {
       top: 52px;
     }
   }
-}
 
-@media print, screen and (max-width: 720px) {
-  .header {
+  @media print, screen and (max-width: $screen-md) {
     padding: 0;
 
     ul,
@@ -109,16 +107,16 @@ strong {
       position: static;
     }
   }
-}
 
-@media print, screen and (max-width: 480px) {
-  .header ul {
-    width: 99%;
-  }
+  @media print, screen and (max-width: $screen-sm) {
+    ul {
+      width: 99%;
+    }
 
-  .header li,
-  .header ul li + li + li {
-    width: 33%;
+    li,
+    ul li + li + li {
+      width: 33%;
+    }
   }
 }
 

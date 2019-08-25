@@ -1,45 +1,43 @@
-import React from 'react'
-import { connect } from 'dva'
-import { injectIntl, FormattedMessage } from 'react-intl'
-import styles from './Skill.scss'
+/* eslint-disable react/no-danger */
+/* eslint-disable jsx-a11y/control-has-associated-label */
+import React, { Component } from 'react';
+import './Skill.scss';
+import { withTranslation } from 'react-i18next';
+import { connect } from 'react-redux';
+import { FaPaintBrush } from 'react-icons/fa';
 
-import _ from 'lodash'
-
-class Skill extends React.Component {
-  constructor(props, context) {
-    super(props, context)
-    this.dispatch = props.dispatch
-    this.state = {}
+class Skill extends Component {
+  constructor(props) {
+    super(props);
+    this.t = this.props.t;
   }
 
   render() {
-    const { intl } = this.props
-
     return (
-      <div>
-        <h2 className={styles['fade-in']}><i className="fa fa-paint-brush"></i>&nbsp; {intl.messages['intl.skill']['title']}</h2>
-        <ul className={styles['fade-in']}>
+      <div id='skill'>
+        <h2 className='fade-in'><FaPaintBrush />&nbsp; {this.t('skill').title}</h2>
+        <ul className='fade-in'>
           <li>
-            <h3>{intl.messages['intl.skill']['sub-title']}<a href="https://github.com/kamranahmedse/developer-roadmap">(參考地圖)</a></h3>
+            <h3>{this.t('skill')['sub-title']}<a href="https://github.com/kamranahmedse/developer-roadmap">(參考地圖)</a></h3>
             <pre dangerouslySetInnerHTML={{
               __html:
                 `{
-  web: {
+  WEB: {
     Front-end: [
-      'ES6',
+      'ES6+',
+      'Vanilla',
       'Angular',
-      'React(Dva)',
-      'media query'
+      'React',
+      'Redux',
+      'RWD'
       'i18n',
-      'SCSS',
       'GoogleMapAPI',
     ],
     Back-end: [
       'Node.js',
       'Express',
-      'koa2',
+      'Koa2',
       'ASP.NET WebForms',
-      'JWT',
     ],
     DevOps: [
       'AWS(S3, EC2)',
@@ -47,7 +45,8 @@ class Skill extends React.Component {
       'Firebase',
       'VMware EXSI',
       'Docker',
-      'travis',
+      'Travis',
+      'Git',
     ],
     DB: [
       'MSSQL',
@@ -60,19 +59,35 @@ class Skill extends React.Component {
       'C# WinForm',
     ],
   },
-}`
-            }}></pre>
+  Computer Science: {
+    Data Mining: [
+      'Weka',
+      'Matlab',
+      'SPSS',
+    ],
+  },
+  Signal: {
+    Physiological: [
+      'Electrocardiography',
+      'surface Electromyography',
+    ],
+  },
+}`,
+            }}
+            >
+            </pre>
           </li>
         </ul>
       </div>
-    )
+    );
   }
 }
 
 Skill.propTypes = {}
 
-function mapStateToProps(state) {
-  return {}
+const mapStateToProps = state => {
+  return {
+  }
 }
 
-export default connect(mapStateToProps)(injectIntl(Skill))
+export default withTranslation()(connect(mapStateToProps)(Skill));

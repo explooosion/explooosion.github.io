@@ -1,64 +1,65 @@
-import React from 'react'
-import { connect } from 'dva'
-import styles from './Header.scss'
-import { injectIntl, FormattedMessage } from 'react-intl'
+import React, { Component } from 'react';
+import './Header.scss';
 
-class Header extends React.Component {
-  constructor(props, context) {
-    super(props, context)
-    this.dispatch = props.dispatch
-    this.state = {}
+import { withTranslation } from 'react-i18next';
+import { connect } from 'react-redux';
+import { FaLink, FaFacebookSquare, FaRssSquare, FaLinkedin, FaGithubSquare, FaGitlab, FaCodepen } from 'react-icons/fa';
+
+class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.t = props.t;
   }
 
   render() {
-    const { intl } = this.props
-
     return (
-      <header className={styles.header}>
-        <img className={styles['jello-horizontal']} src="assets/img/avatar.png" alt="Hi" title="Hi" /><br /><br />
+      <header id='header'>
+        <img className='jello-horizontal' src="/avatar.png" alt="Hi" title="Hi" /><br /><br />
         <h1>Robby</h1>
         <h4>ta7382@gmail.com</h4>
         <hr />
-        <p>{intl.formatMessage({ id: 'intl.title' })}</p>
-        <p>{intl.formatMessage({ id: 'intl.edu' })}
+        <p>{this.t('title')}</p>
+        <p>{this.t('edu')}
           <a rel="noopener noreferrer" target="_blank" href="http://im.nutc.edu.tw/bin/home.php">
-            <i className="fa fa-link"></i>
+            <FaLink />
           </a>
         </p>
-        <div className={styles.headerIcons}>
+        <div className='headerIcons'>
           <a rel="noopener noreferrer" target="_blank" href="https://fb.me/qi.lian.56">
-            <i className="fa fa-2x fa-facebook-square" aria-hidden="true"></i>
+            <FaFacebookSquare size='2em' />
           </a>
           &nbsp;
           <a rel="noopener noreferrer" target="_blank" href="https://dotblogs.com.tw/explooosion">
-            <i className="fa fa-2x fa-rss-square" aria-hidden="true"></i>
+            <FaRssSquare size='2em' />
           </a>
           &nbsp;
           <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/robby-wu-2b26b510a/">
-            <i className="fa fa-2x fa-linkedin-square" aria-hidden="true"></i>
+            <FaLinkedin size='2em' />
           </a>
           &nbsp;
           <a rel="noopener noreferrer" target="_blank" href="https://github.com/explooosion">
-            <i className="fa fa-2x fa-github" aria-hidden="true"></i>
+            <FaGithubSquare size='2em' />
           </a>
           &nbsp;
           <a rel="noopener noreferrer" target="_blank" href="https://gitlab.com/explooosion">
-            <i className="fa fa-2x fa-gitlab" aria-hidden="true"></i>
+            <FaGitlab size='2em' />
           </a>
           &nbsp;
           <a rel="noopener noreferrer" target="_blank" href="https://codepen.io/ta7382/">
-            <i className="fa fa-2x fa-codepen" aria-hidden="true"></i>
+            <FaCodepen size='2em' />
           </a>
         </div>
       </header>
-    )
+    );
   }
 }
 
 Header.propTypes = {}
 
-function mapStateToProps(state) {
-  return {}
+const mapStateToProps = state => {
+  return {
+    settings: state.settings,
+  }
 }
 
-export default connect(mapStateToProps)(injectIntl(Header))
+export default withTranslation()(connect(mapStateToProps)(Header));

@@ -1,26 +1,25 @@
-import React from 'react'
-import { connect } from 'dva'
-import { injectIntl, FormattedMessage } from 'react-intl'
-import styles from './Activity.scss'
+/* eslint-disable react/no-danger */
+/* eslint-disable jsx-a11y/control-has-associated-label */
+import React, { Component } from 'react';
+import './Intro.scss';
 
-import _ from 'lodash'
+import { withTranslation } from 'react-i18next';
+import { connect } from 'react-redux';
+import { FaPaperclip } from 'react-icons/fa';
 
-class Activity extends React.Component {
-  constructor(props, context) {
-    super(props, context)
-    this.dispatch = props.dispatch
-    this.state = {}
+class Activity extends Component {
+  constructor(props) {
+    super(props);
+    this.t = this.props.t;
   }
 
   render() {
-    const { intl } = this.props
-
     return (
-      <div>
-        <h2 className={styles['fade-in']}><i className="fa fa-paperclip"></i>&nbsp; {intl.formatMessage({ id: 'intl.activity' })}</h2>
-        <ul className={styles['fade-in']}>
+      <div id='activity'>
+        <h2 className='fade-in'><FaPaperclip />&nbsp; {this.t('activity')}</h2>
+        <ul className='fade-in'>
           <li>
-            <h3>{intl.formatMessage({ id: 'intl.activity.publication' })}</h3>
+            <h3>{this.t('activity.publication')}</h3>
             <pre dangerouslySetInnerHTML={{
               __html: `{
   2018: [
@@ -29,11 +28,13 @@ class Activity extends React.Component {
   2017: [
     <a href="https://www.tenlong.com.tw/products/9789863795599" target="_blank">'Angular2 其實可以很簡單：實務範例教學'</a>,
   ],
-}`
-            }}></pre>
+}`,
+            }}
+            >
+            </pre>
           </li>
           <li>
-            <h3>{intl.formatMessage({ id: 'intl.activity.technical' })}</h3>
+            <h3>{this.t('activity.technical')}</h3>
             <pre dangerouslySetInnerHTML={{
               __html: `{
   2018: [
@@ -58,11 +59,13 @@ class Activity extends React.Component {
     <a href="https://study4-tw.kktix.cc/events/nvo-2015" target="_blank">'Study4.TW－November 2015'</a>,
     <a href="https://taichung-frontend.kktix.cc/events/151119" target="_blank">'Javascript三代同堂'</a>,
   ],
-}`
-            }}></pre>
+}`,
+            }}
+            >
+            </pre>
           </li>
           <li>
-            <h3>{intl.formatMessage({ id: 'intl.activity.event' })}</h3>
+            <h3>{this.t('activity.event')}</h3>
             <pre dangerouslySetInnerHTML={{
               __html: `{
   2018: [
@@ -73,20 +76,22 @@ class Activity extends React.Component {
     <a href="https://www.accupass.com/event/1710260630563716620400" target="_blank">'2017 新竹黑客松'</a> - <a href="https://github.com/explooosion/HsinchuHackathon" target="_blank">GitHub</a>,
     <a href="https://www.accupass.com/event/1704140234301547836531" target="_blank">'2017 嘉義黑蚵松'</a> - <a href="https://github.com/explooosion/ChiayiHackathon" target="_blank">GitHub</a>,
   ],
-}`
-            }}>
+}`,
+            }}
+            >
             </pre>
           </li>
         </ul>
       </div>
-    )
+    );
   }
 }
 
 Activity.propTypes = {}
 
-function mapStateToProps(state) {
-  return {}
+const mapStateToProps = state => {
+  return {
+  }
 }
 
-export default connect(mapStateToProps)(injectIntl(Activity))
+export default withTranslation()(connect(mapStateToProps)(Activity));

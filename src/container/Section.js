@@ -1,7 +1,8 @@
-import React from 'react'
-import { connect } from 'dva'
-import styles from './Section.scss'
-import { injectIntl, FormattedMessage } from 'react-intl'
+import React, { Component } from 'react';
+import './Section.scss';
+
+import { withTranslation } from 'react-i18next';
+import { connect } from 'react-redux';
 
 import Intro from '../components/Intro';
 import Work from '../components/Work';
@@ -11,40 +12,32 @@ import Blog from '../components/Blog';
 import Activity from '../components/Activity';
 import Analysis from '../components/Analysis';
 
-class Section extends React.Component {
-  constructor(props, context) {
-    super(props, context)
-    this.dispatch = props.dispatch
-    this.state = {}
+class Section extends Component {
+  constructor(props) {
+    super(props);
+    this.t = this.props.t;
   }
 
   render() {
-    const { intl } = this.props
-
     return (
-      <section className={styles.section}>
-        <Intro />
-        <hr />
-        <Work />
-        <hr />
-        <Skill />
-        <hr />
-        <SideProject />
-        <hr />
-        <Blog />
-        <hr />
-        <Activity />
-        <hr />
+      <section id='section'>
+        <Intro /><hr />
+        <Work /><hr />
+        <Skill /><hr />
+        <SideProject /><hr />
+        <Blog /><hr />
+        <Activity /><hr />
         <Analysis />
       </section>
-    )
+    );
   }
 }
 
 Section.propTypes = {}
 
-function mapStateToProps(state) {
-  return {}
+const mapStateToProps = state => {
+  return {
+  }
 }
 
-export default connect(mapStateToProps)(injectIntl(Section))
+export default withTranslation()(connect(mapStateToProps)(Section));

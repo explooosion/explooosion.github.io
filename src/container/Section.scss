@@ -1,15 +1,11 @@
-.section {
+@import '../scss/index';
+
+#section {
   width: 500px;
   float: right;
   padding-bottom: 50px;
 
-  tt .chinese {
-    font-family: 'Noto Sans TC', sans;
-  }
-}
-
-@media print, screen and (max-width: 960px) {
-  .section {
+  @media print, screen and (max-width: $screen-lg) {
     float: none;
     position: static;
     width: auto;
@@ -17,5 +13,9 @@
     border-width: 1px 0;
     padding: 20px 0;
     margin: 0 0 20px;
+  }
+
+  tt .chinese {
+    font-family: 'Noto Sans TC', sans;
   }
 }
