@@ -8,7 +8,7 @@ const en_US = { // eslint-disable-line
   'title': `Full-Stack's Front-End Engineer`,
   'edu': 'B. B. A. ,NUTC',
   'intro': `Hi, I'm <b>Robby</b>.<br>
-    I'm from Taichung, Taiwan. I graduated from the National Institute of Technology, Taichung University of Science and Technology, and I am currently preparing for military service.<br><br> I like to research technology, run blogs, and record experiences as articles.
+    I'm from Taichung, Taiwan. I graduated from the National Institute of Technology, Taichung University of Science and Technology.<br><br> I like to research technology, run blogs, and record experiences as articles.
     This website is a personal resume, which records information such as work sharing and technical experience.<br><br> Nice to meet you !`,
   'work': {
     title: 'Work Experiences',
