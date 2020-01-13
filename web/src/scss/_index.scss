@@ -1,3 +1,7 @@
+/* Fonts */
+@import './fonts/SansPro';
+@import './fonts/SeagullW01Medium';
+
 /* Reset */
 @import './reset/normal';
 
@@ -8,6 +12,5 @@
 @import './models/font';
 
 /* Components */
-@import './components/layout';
 @import './components/fade';
 
