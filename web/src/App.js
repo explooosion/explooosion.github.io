@@ -1,61 +1,83 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.scss';
 
-import { HashRouter } from 'react-router-dom';
-import { connect } from 'react-redux';
 import ReactFlagsSelect from 'react-flags-select';
 
 import Header from './container/Header';
 import Footer from './container/Footer';
 import Section from './container/Section';
 
-import { setLocal } from './actions';
+function App() {
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.dispatch = props.dispatch;
-    this.state = {
-      countries: props.settings.countries,
-      customLabels: props.settings.customLabels,
-      transDefault: props.settings.locale,
-    }
+  const onSelectFlag = (e) => {
+    console.log('onSelectFlag', e)
   }
 
-  onSelectFlag(countryCode) {
-    this.dispatch(setLocal({ locale: countryCode }));
-  }
-
-
-  render() {
-
-    return (
-      <HashRouter>
-        <div id='wrapper' data-locale={this.locale}>
-          <ReactFlagsSelect
-            className='flag-select'
-            defaultCountry={this.state.transDefault}
-            countries={this.state.countries}
-            customLabels={this.state.customLabels}
-            selectedSize={30}
-            showSelectedLabel={false}
-            onSelect={(e) => this.onSelectFlag(e)}
-          />
-          <Header />
-          <Section />
-          <Footer />
-        </div>
-      </HashRouter>
-    );
-  }
+  return (
+    <div id='wrapper'>
+      <ReactFlagsSelect
+        className='flag-select'
+        defaultCountry={'US'}
+        countries={['US', 'TW', 'CN']}
+        customLabels={{ 'US': 'English', 'TW': 'Traditional Chinese', 'CN': 'Simplified Chinese' }}
+        selectedSize={30}
+        showSelectedLabel={false}
+        onSelect={(e) => onSelectFlag(e)}
+      />
+      <Header />
+      <Section />
+      <Footer />
+    </div>
+  );
 }
 
-App.propTypes = {}
+export default App;
 
-const mapStateToProps = state => {
-  return {
-    settings: state.settings,
-  }
-}
+// class App extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.dispatch = props.dispatch;
+//     this.state = {
+//       countries: props.settings.countries,
+//       customLabels: props.settings.customLabels,
+//       transDefault: props.settings.locale,
+//     }
+//   }
 
-export default connect(mapStateToProps)(App);
+//   onSelectFlag(countryCode) {
+//     this.dispatch(setLocal({ locale: countryCode }));
+//   }
+
+
+//   render() {
+
+//     return (
+//       <HashRouter>
+//         <div id='wrapper'>
+//           <ReactFlagsSelect
+//             className='flag-select'
+//             defaultCountry={this.state.transDefault}
+//             countries={this.state.countries}
+//             customLabels={this.state.customLabels}
+//             selectedSize={30}
+//             showSelectedLabel={false}
+//             onSelect={(e) => this.onSelectFlag(e)}
+//           />
+//           <Header />
+//           <Section />
+//           <Footer />
+//         </div>
+//       </HashRouter>
+//     );
+//   }
+// }
+
+// App.propTypes = {}
+
+// const mapStateToProps = state => {
+//   return {
+//     settings: state.settings,
+//   }
+// }
+
+// export default connect(mapStateToProps)(App);

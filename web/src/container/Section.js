@@ -1,8 +1,5 @@
-import React, { Component } from 'react';
-import './Section.scss';
-
-import { withTranslation } from 'react-i18next';
-import { connect } from 'react-redux';
+import React from 'react';
+import styled from 'styled-components';
 
 import Intro from '../components/Intro';
 import Work from '../components/Work';
@@ -12,32 +9,34 @@ import Blog from '../components/Blog';
 import Activity from '../components/Activity';
 import Analysis from '../components/Analysis';
 
-class Section extends Component {
-  constructor(props) {
-    super(props);
-    this.t = this.props.t;
-  }
+const Main = styled.main`
+  width: 500px;
+  float: right;
+  padding-bottom: 50px;
 
-  render() {
-    return (
-      <section id='section'>
-        <Intro /><hr />
-        <Work /><hr />
-        <Skill /><hr />
-        <SideProject /><hr />
-        <Blog /><hr />
-        <Activity /><hr />
-        <Analysis />
-      </section>
-    );
+  @media print, screen and (max-width: ${p => p.screenLg}) {
+    float: none;
+    position: static;
+    width: auto;
+    border: 1px solid #e5e5e5;
+    border-width: 1px 0;
+    padding: 20px 0;
+    margin: 0 0 20px;
   }
+`;
+
+function Section() {
+  return (
+    <Main>
+      <Intro /><hr />
+      <Work /><hr />
+      <Skill /><hr />
+      <SideProject /><hr />
+      <Blog /><hr />
+      <Activity /><hr />
+      <Analysis />
+    </Main>
+  );
 }
 
-Section.propTypes = {}
-
-const mapStateToProps = state => {
-  return {
-  }
-}
-
-export default withTranslation()(connect(mapStateToProps)(Section));
+export default Section;

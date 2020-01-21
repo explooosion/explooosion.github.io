@@ -1,36 +1,34 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import LanguageDetector from "i18next-browser-languagedetector";
-import Cookies from 'js-cookie';
+import detector from "i18next-browser-languagedetector";
+import _ from 'lodash';
+
+import { COOKIE_I18N, getCookie, setCookie } from './utils/Cookie';
 
 // the translations
 // (tip move them in a JSON file and import them)
-import translationEN from './locales/US.js';
-import translationTW from './locales/TW.js';
-import translationCN from './locales/CN.js';
+import US from './i18n/enUS';
+import TW from './i18n/zhTW';
+import CN from './i18n/zhCN';
 
-const lng = Cookies.get('locale') === undefined ? 'TW' : Cookies.get('locale');
+let lng = getCookie(COOKIE_I18N);
+lng = _.isNull(lng) ? setCookie(COOKIE_I18N, 'TW') || 'TW' : lng;
 
-const resources = {
-  US: { translation: translationEN },
-  TW: { translation: translationTW },
-  CN: { translation: translationCN },
-};
+const resources = { US, TW, CN };
 
 i18n
-  .use(LanguageDetector)
+  .use(detector)
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
     resources,
 
     lng, // get default from cookie
-    
-    returnObjects: true,
+
+    returnObjects: true, // locale build with object
 
     keySeparator: false, // we do not use keys in form messages.welcome
-    fallbackLng: 'TW',
 
-    // debug: true,
+    fallbackLng: 'TW',
 
     interpolation: {
       escapeValue: false, // react already safes from xss

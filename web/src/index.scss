@@ -1,12 +1,2 @@
-@import url(https://fonts.googleapis.com/earlyaccess/cwtexhei.css);
-@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
-@import '~react-flags-select/css/react-flags-select.css';
-@import './scss/index';
-
-body {
-  background-color: #fff;
-  padding: 50px;
-  font: 14px/1.5 -apple-system, Roboto, Oxygen, Ubuntu, Cantarell, "Noto Sans TC", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  color: #595959;
-  font-weight: 400;
-}
+@import "~react-flags-select/css/react-flags-select.css";
+@import "./scss/index";

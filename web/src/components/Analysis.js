@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { FaChartPie } from 'react-icons/fa';
 
 function Analysis() {
-  const t = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div id='analysis'>

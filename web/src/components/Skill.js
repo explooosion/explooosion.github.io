@@ -3,7 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { FaPaintBrush } from 'react-icons/fa';
 
 function Skill() {
-  const t = useTranslation();
+  const { t } = useTranslation();
+
   return (
     <div id='skill'>
       <h2 className='fade-in'><FaPaintBrush />&nbsp; {t('skill').title}</h2>

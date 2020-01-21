@@ -1,40 +1,74 @@
-/* eslint-disable jsx-a11y/control-has-associated-label */
-import React, { Component } from 'react';
-import './Footer.scss';
+import React from 'react';
+import styled from 'styled-components';
 
-import { withTranslation } from 'react-i18next';
-import { connect } from 'react-redux';
+const Foot = styled.footer`
+  width: 270px;
+  float: left;
+  position: fixed;
+  bottom: 35px;
+  -webkit-font-smoothing: subpixel-antialiased;
 
-class Footer extends Component {
-  constructor(props) {
-    super(props);
-    this.t = this.props.t;
+  @media print, screen and (max-height: ${p => p.screenMd}) {
+    top: 620px;
   }
 
-  render() {
-    return (
-      <footer id='footer'>
-        <p>
-          <small>
-            Hosted on GitHub Pages
+  @media print, screen and (max-width:${p => p.screenLg}) {
+    float: none;
+    position: static;
+    width: auto;
+  }
+`;
+
+function Footer() {
+  return (
+    <Foot>
+      <p>
+        <small>
+          Hosted on GitHub Pages
             <br />
-            &mdash; Base Theme by
+          &mdash; Base Theme by
             <a rel="noopener noreferrer" target="_blank" href="https://github.com/orderedlist">orderedlist</a>
-            <br />
-            &mdash; Base Design by
+          <br />
+          &mdash; Base Design by
             <a rel="noopener noreferrer" target="_blank" href="https://github.com/lulalachen">lulalachen</a>
-          </small>
-        </p>
-      </footer>
-    );
-  }
+        </small>
+      </p>
+    </Foot>
+  );
 }
 
-Footer.propTypes = {}
+export default Footer;
 
-const mapStateToProps = state => {
-  return {
-  }
-}
+// class Footer extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.t = this.props.t;
+//   }
 
-export default withTranslation()(connect(mapStateToProps)(Footer));
+//   render() {
+//     return (
+//       <footer id='footer'>
+//         <p>
+//           <small>
+//             Hosted on GitHub Pages
+//             <br />
+//             &mdash; Base Theme by
+//             <a rel="noopener noreferrer" target="_blank" href="https://github.com/orderedlist">orderedlist</a>
+//             <br />
+//             &mdash; Base Design by
+//             <a rel="noopener noreferrer" target="_blank" href="https://github.com/lulalachen">lulalachen</a>
+//           </small>
+//         </p>
+//       </footer>
+//     );
+//   }
+// }
+
+// Footer.propTypes = {}
+
+// const mapStateToProps = state => {
+//   return {
+//   }
+// }
+
+// export default withTranslation()(connect(mapStateToProps)(Footer));

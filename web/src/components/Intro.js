@@ -2,7 +2,8 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 function Intro() {
-  const t = useTranslation();
+  const { t } = useTranslation();
+  console.log(t('intro'));
   return (
     <div id='intro'>
       <p>

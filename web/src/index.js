@@ -1,27 +1,41 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { createStore, applyMiddleware } from 'redux';
-import { Provider } from 'react-redux';
-import thunk from 'redux-thunk';
+import * as React from 'react'
+import { render } from 'react-dom'
+import { ThemeProvider, createGlobalStyle } from 'styled-components';
+
 import './index.scss';
 import './i18n';
-import reducers from './reducers';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-const store = createStore(
-  reducers,
-  applyMiddleware(thunk)
-);
+// eslint-disable-next-line import/no-webpack-loader-syntax
+const theme = require('sass-extract-loader?{"plugins":["sass-extract-js"]}!./scss/_index.scss');
 
-ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+const GlobalStyle = createGlobalStyle`
+  *,
+  ::after,
+  ::before {
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    padding: 50px;
+    font-size: 14px;
+    font-family: $global-font;
+    font-weight: 400;
+    color: #595959;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    z-index: 0;
+  }
+`;
+
+render(
+  <ThemeProvider theme={theme}>
+    <GlobalStyle />
+    <App />,
+  </ThemeProvider>,
   document.getElementById('root')
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();

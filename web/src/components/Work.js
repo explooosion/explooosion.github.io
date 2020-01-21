@@ -4,7 +4,8 @@ import { FaPaperPlane } from 'react-icons/fa';
 import _ from 'lodash';
 
 function Work() {
-  const t = useTranslation();
+  const { t } = useTranslation();
+
   return (
     <div id='work'>
       <h2 className='fade-in'>

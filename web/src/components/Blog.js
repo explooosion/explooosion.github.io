@@ -3,7 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { FaPaperclip } from 'react-icons/fa';
 
 function Blog() {
-  const t = useTranslation();
+  const { t } = useTranslation();
+
   return (
     <div id='blog'>
       <h2 className='face-in'><FaPaperclip />&nbsp; {t('blog')}</h2>

@@ -3,7 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { FaBoxOpen } from 'react-icons/fa';
 
 function SideProject() {
-  const t = useTranslation();
+  const { t } = useTranslation();
+
   return (
     <div id='side-project'>
       <h2 className='face-in'><FaBoxOpen />&nbsp; {t('side-project')}</h2>

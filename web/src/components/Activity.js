@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { FaPaperclip } from 'react-icons/fa';
 
 function Activity() {
-  const t = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div id='activity'>
