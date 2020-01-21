@@ -7,7 +7,7 @@ export default {
     'hello': '你好!',
     'name': '我的名字是 {name}',
     'title': '全端的 Front-End Engineer',
-    'edu': '国立台中科技大学 资讯管理系',
+    'edu': '国立台中科技大学 资讯管理研究所',
     'intro': `你好，我是 <b>Robby</b>.<br>我来自台湾的台中，毕业于国立台中科技大学资管研究所。<br><br>我喜欢研究技术，也有经营 Blog，把经验记录成文章。<br>本网站为个人简历介绍，记录作品分享、技术心得等资讯。<br><br>很高兴认识你！`,
     'work': {
       title: 'Work Experiences',
@@ -104,5 +104,5 @@ export default {
     'activity.event': '活动比赛',
     'analysis': '综合分析',
     'analysis.lan': '语言',
-  }
+  },
 }

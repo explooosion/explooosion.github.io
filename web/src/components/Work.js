@@ -1,35 +1,43 @@
 import React from 'react';
+import styled from 'styled-components';
+import htmlReactParser from 'html-react-parser';
 import { useTranslation } from 'react-i18next';
 import { FaPaperPlane } from 'react-icons/fa';
-import _ from 'lodash';
+
+import SectionBase from '../layouts/SectionBase';
+
+const Section = styled(SectionBase)`
+`;
 
 function Work() {
   const { t } = useTranslation();
+  const { title, items } = t('work');
+
+  const renderWork = (work, index) => {
+    const { name, job, description } = work;
+    return (
+      <li key={index}>
+        <h3
+          style={{ 'lineHeight': '25px' }}
+        >
+          {htmlReactParser(name)}
+        </h3>
+        <h3><tt className='chinese'>{htmlReactParser(job)}</tt></h3>
+        <p>{htmlReactParser(description)}</p>
+      </li>
+    )
+  }
 
   return (
-    <div id='work'>
+    <Section>
       <h2 className='fade-in'>
         <FaPaperPlane />&nbsp;
-        {t('work').title}
+        {title}
       </h2>
       <ul className='fade-in'>
-        {
-          _.map(t('work').items, (item, index) => {
-            return (
-              <li key={index}>
-                <h3
-                  style={{ 'lineHeight': '25px' }}
-                  dangerouslySetInnerHTML={{ __html: item.name }}
-                >
-                </h3>
-                <h3><tt className='chinese'>{item.job}</tt></h3>
-                <p>{item.description}</p>
-              </li>
-            )
-          })
-        }
+        {items.map((work, index) => renderWork(work, index))}
       </ul>
-    </div>
+    </Section>
   );
 }
 

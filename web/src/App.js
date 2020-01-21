@@ -1,83 +1,38 @@
 import React from 'react';
-import './App.scss';
+import styled from 'styled-components';
 
-import ReactFlagsSelect from 'react-flags-select';
-
-import Header from './container/Header';
+// container
 import Footer from './container/Footer';
+import Header from './container/Header';
+import Locale from './container/Locale';
 import Section from './container/Section';
 
-function App() {
+const Wrapper = styled.div`
 
-  const onSelectFlag = (e) => {
-    console.log('onSelectFlag', e)
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 3rem auto 0;
+  width: ${p => p.theme.appWidth};
+
+  @media only screen and (max-width: ${p => p.theme.screenLg}) {
+    flex-flow: column;
+    margin-top: 0;
+    width: 90vw;
   }
+`;
 
+function App() {
   return (
-    <div id='wrapper'>
-      <ReactFlagsSelect
-        className='flag-select'
-        defaultCountry={'US'}
-        countries={['US', 'TW', 'CN']}
-        customLabels={{ 'US': 'English', 'TW': 'Traditional Chinese', 'CN': 'Simplified Chinese' }}
-        selectedSize={30}
-        showSelectedLabel={false}
-        onSelect={(e) => onSelectFlag(e)}
-      />
+    <Wrapper>
+      <Locale />
       <Header />
       <Section />
       <Footer />
-    </div>
+    </Wrapper>
   );
 }
 
 export default App;
-
-// class App extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.dispatch = props.dispatch;
-//     this.state = {
-//       countries: props.settings.countries,
-//       customLabels: props.settings.customLabels,
-//       transDefault: props.settings.locale,
-//     }
-//   }
-
-//   onSelectFlag(countryCode) {
-//     this.dispatch(setLocal({ locale: countryCode }));
-//   }
-
-
-//   render() {
-
-//     return (
-//       <HashRouter>
-//         <div id='wrapper'>
-//           <ReactFlagsSelect
-//             className='flag-select'
-//             defaultCountry={this.state.transDefault}
-//             countries={this.state.countries}
-//             customLabels={this.state.customLabels}
-//             selectedSize={30}
-//             showSelectedLabel={false}
-//             onSelect={(e) => this.onSelectFlag(e)}
-//           />
-//           <Header />
-//           <Section />
-//           <Footer />
-//         </div>
-//       </HashRouter>
-//     );
-//   }
-// }
-
-// App.propTypes = {}
-
-// const mapStateToProps = state => {
-//   return {
-//     settings: state.settings,
-//   }
-// }
-
-// export default connect(mapStateToProps)(App);

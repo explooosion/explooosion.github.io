@@ -7,7 +7,7 @@ export default {
     'hello': '你好!',
     'name': '我的名字是 {name}',
     'title': '全端的 Front-End Engineer',
-    'edu': '國立臺中科技大學 資訊管理系',
+    'edu': '國立臺中科技大學 資訊管理研究所',
     'intro': `你好，我是 <b>Robby</b>.<br>我來自臺灣的臺中，畢業於國立臺中科技大學資管研究所。<br><br>我喜歡研究技術，也有經營 Blog，把經驗記錄成文章。<br>本網站為個人簡歷介紹，記錄作品分享、技術心得等資訊。<br><br>很高興認識你！`,
     'work': {
       title: 'Work Experiences',
@@ -104,5 +104,5 @@ export default {
     'activity.event': '活動比賽',
     'analysis': '綜合分析',
     'analysis.lan': '語言',
-  }
+  },
 }

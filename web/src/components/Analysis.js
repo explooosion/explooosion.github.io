@@ -1,13 +1,21 @@
 import React from 'react';
+import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import { FaChartPie } from 'react-icons/fa';
+
+import SectionBase from '../layouts/SectionBase';
+
+const Section = styled(SectionBase)`
+`;
 
 function Analysis() {
   const { t } = useTranslation();
 
   return (
-    <div id='analysis'>
-      <h2 className='face-in'><FaChartPie />&nbsp; {t('analysis')}</h2>
+    <Section>
+      <h2 className='face-in'>
+        <FaChartPie />&nbsp; {t('analysis')}
+      </h2>
       <ul className='face-in'>
         <li>
           <h3>
@@ -20,7 +28,7 @@ function Analysis() {
           <pre><iframe title="profile" width="500" height="500" src="https://ionicabizau.github.io/github-profile-languages/api.html?explooosion" frameBorder="0" scrolling="no"></iframe></pre>
         </li>
       </ul>
-    </div>
+    </Section>
   );
 }
 

@@ -106,5 +106,5 @@ export default {
     'activity.event': 'Event Competition',
     'analysis': 'Analysis',
     'analysis.lan': 'Languages',
-  }
+  },
 }

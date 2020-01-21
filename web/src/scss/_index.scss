@@ -1,16 +1,16 @@
 /* Fonts */
 @import './fonts/SansPro';
-@import './fonts/SeagullW01Medium';
 
 /* Reset */
 @import './reset/normal';
 
 /* Models */
 @import './models/color';
-@import './models/config';
 @import './models/screen';
 @import './models/font';
 
 /* Components */
 @import './components/fade';
+@import './components/jello';
+@import './components/tracking';
 

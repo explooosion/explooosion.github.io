@@ -15,20 +15,24 @@ const GlobalStyle = createGlobalStyle`
   ::before {
     box-sizing: border-box;
   }
+
   html,
   body {
     position: relative;
     margin: 0;
     padding: 0;
-    background-color: #fff;
-    padding: 50px;
     font-size: 14px;
     font-family: $global-font;
     font-weight: 400;
-    color: #595959;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    color: $dark;
+    background-color: #fff;
     z-index: 0;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  p {
+    text-align: justify;
   }
 `;
 
