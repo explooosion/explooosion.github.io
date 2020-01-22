@@ -16,24 +16,24 @@ export default {
       items: [
         {
           'name': `格
-          <i class="fa fa-circle-o"></i>
-          <i class="fa fa-circle-o"></i>
-          <i class="fa fa-circle-o"></i>
-          <i class="fa fa-circle-o"></i>
-          <i class="fa fa-circle-o"></i> Inc.`,
+          <i class="far fa-circle"></i>
+          <i class="far fa-circle"></i>
+          <i class="far fa-circle"></i>
+          <i class="far fa-circle"></i>
+          <i class="far fa-circle"></i> Inc.`,
           'job': 'Front-End Engineer',
           'description': `Using agile development methodology, and building with AngularJS to cut a page.`,
         },
         {
-          'name': `雍 <i class="fa fa-circle-o"></i> Inc.`,
+          'name': `雍 <i class="far fa-circle"></i> Inc.`,
           'job': 'Software Engineer',
           'description': `The projects come from the government.Products are geographic information system. I use ASP.NET Web Forms for development, and using Google Map API, OpenLayers, MapGuide to set up the map.`,
         },
         {
           'name': `開
-          <i class="fa fa-circle-o"></i>
-          <i class="fa fa-circle-o"></i>
-          <i class="fa fa-circle-o"></i>Inc.`,
+          <i class="far fa-circle"></i>
+          <i class="far fa-circle"></i>
+          <i class="far fa-circle"></i> Inc.`,
           'job': 'Assistant Engineer',
           'description': `Maintaining website with PHP, and writing Standard Operating Procedure (SOP).`,
         },

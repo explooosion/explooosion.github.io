@@ -14,24 +14,24 @@ export default {
       items: [
         {
           'name': `格
-          <i class="fa fa-circle-o"></i>
-          <i class="fa fa-circle-o"></i>
-          <i class="fa fa-circle-o"></i>
-          <i class="fa fa-circle-o"></i>
-          <i class="fa fa-circle-o"></i> Inc.`,
+          <i class="far fa-circle"></i>
+          <i class="far fa-circle"></i>
+          <i class="far fa-circle"></i>
+          <i class="far fa-circle"></i>
+          <i class="far fa-circle"></i> Inc.`,
           'job': '前端工程師',
           'description': `參與敏捷開發，撰寫網頁遊戲入口平台，使用 AngularJS 以及 ASP.NET MVC。 由設計師提供版面，協助同事切版或套版。`,
         },
         {
-          'name': `雍 <i class="fa fa-circle-o"></i> Inc.`,
+          'name': `雍 <i class="far fa-circle"></i> Inc.`,
           'job': '軟體工程師',
           'description': `參與政府招標或是 SBIR 計劃案，產品為 GIS 地理資訊平台導向。<br />負責網站開發或維護，使用 ASP.NET Web Forms 以 C# 或 VB 進行撰寫，進行圖層套疊。空間資料庫使用 MSSQL、PostGIS，並以 Google Map API、OpenLayers、MapGuide，進行圖資展示。`,
         },
         {
           'name': `開
-          <i class="fa fa-circle-o"></i>
-          <i class="fa fa-circle-o"></i>
-          <i class="fa fa-circle-o"></i> Inc.`,
+          <i class="far fa-circle"></i>
+          <i class="far fa-circle"></i>
+          <i class="far fa-circle"></i> Inc.`,
           'job': '助理工程師',
           'description': `資訊部門助理，協助主管撰寫IT部門 SOP 文件，以及資產管理、電腦維護、採購等。參與公司 ERP 維護，使用語言為 PHP。`,
         },

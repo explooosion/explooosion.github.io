@@ -14,24 +14,24 @@ export default {
       items: [
         {
           'name': `格
-          <i class="fa fa-circle-o"></i>
-          <i class="fa fa-circle-o"></i>
-          <i class="fa fa-circle-o"></i>
-          <i class="fa fa-circle-o"></i>
-          <i class="fa fa-circle-o"></i> Inc.`,
+          <i class="far fa-circle"></i>
+          <i class="far fa-circle"></i>
+          <i class="far fa-circle"></i>
+          <i class="far fa-circle"></i>
+          <i class="far fa-circle"></i> Inc.`,
           'job': '前端工程师',
           'description': `参与敏捷开发，撰写网页游戏入口平台，使用 AngularJS 以及 ASP.NET MVC。 由设计师提供版面，协助同事切版或套版。`,
         },
         {
-          'name': `雍 <i class="fa fa-circle-o"></i> Inc.`,
+          'name': `雍 <i class="far fa-circle"></i> Inc.`,
           'job': '软体工程师',
           'description': `参与政府招标或是 SBIR 计划案，产品为 GIS 地理资讯平台导向。<br />负责网站开发或维护，使用 ASP.NET Web Forms 以 C# 或 VB 进行撰写，进行图层套迭。空间资料库使用 MSSQL、PostGIS，并以 Google Map API、OpenLayers、MapGuide，进行图资展示。`,
         },
         {
           'name': `开
-          <i class="fa fa-circle-o"></i>
-          <i class="fa fa-circle-o"></i>
-          <i class="fa fa-circle-o"></i> Inc.`,
+          <i class="far fa-circle"></i>
+          <i class="far fa-circle"></i>
+          <i class="far fa-circle"></i> Inc.`,
           'job': '助理工程师',
           'description': `资讯部门助理，协助主管撰写IT部门 SOP 文件，以及资产管理、电脑维护、采购等。参与公司 ERP 维护，使用语言为 PHP。`,
         },
