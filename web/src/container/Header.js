@@ -88,6 +88,7 @@ function Header() {
     const { key, url, img: Img } = icon;
     return (
       <a
+        className="shake"
         key={key}
         rel="noopener noreferrer"
         target="_blank"

@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
+    "csshake": "^1.5.3",
     "html-react-parser": "^0.10.0",
     "i18next": "^19.0.3",
     "i18next-browser-languagedetector": "^4.0.1",

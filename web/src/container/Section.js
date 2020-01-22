@@ -12,6 +12,7 @@ import Analysis from '../components/Analysis';
 
 const Main = styled.main`
 
+  padding-bottom: 3rem;
   width: 500px;
 
   @media only screen and (max-width: ${p => p.theme.screenLg}) {
