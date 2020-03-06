@@ -17,15 +17,20 @@ const skill = `{
       'Angular',
       'React',
       'Redux',
+      'Webpack',
       'RWD'
       'i18n',
       'GoogleMapAPI',
+      'PixiJS',
     ],
     Back-end: [
       'Node.js',
       'Express',
       'Koa2',
       'ASP.NET WebForms',
+      'Nginx',
+      'Socket',
+      'JWT',
     ],
     DevOps: [
       'AWS(S3, EC2)',
@@ -45,6 +50,9 @@ const skill = `{
     Desktop: [
       'Electron',
       'C# WinForm',
+    ],
+    IDE: [
+      'VSCode',
     ],
   },
   Computer Science: {
