@@ -85,14 +85,14 @@ function Header() {
   }
 
   const renderIcons = icon => {
-    const { key, url, img: Img } = icon;
+    const { key, link, img: Img } = icon;
     return (
       <a
-        className="shake"
         key={key}
+        href={link}
+        className="shake"
         rel="noopener noreferrer"
         target="_blank"
-        href={url}
       >
         <Img size="2em" />
       </a>
