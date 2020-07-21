@@ -11,7 +11,7 @@ const Section = styled(SectionBase)`
 
 const publication = `{
   2018: [
-    <a href="http://ibac-conference.org/bai/" target="_blank">'BAI Conference || Seoul, Korea'</a>,
+    <a href="http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=1807" target="_blank">'BAI Conference || Seoul, Korea'</a>,
   ],
   2017: [
     <a href="https://www.tenlong.com.tw/products/9789863795599" target="_blank">'Angular2 其實可以很簡單：實務範例教學'</a>,
@@ -45,7 +45,7 @@ const technical = `{
 
 const event = `{
   2018: [
-    <a href="https://www.accupass.com/event/1710260630563716620400" target="_blank">'全國大專校院資訊應用服務創新競賽
+    <a href="https://innoserve.tca.org.tw/" target="_blank">'全國大專校院資訊應用服務創新競賽
       -企業數位轉型與雲端系統創新應用組'</a>,
   ],
   2017: [

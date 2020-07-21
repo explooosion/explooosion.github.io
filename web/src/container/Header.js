@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { rgba } from 'polished';
 import { useTranslation } from 'react-i18next';
 import {
-  FaFacebookSquare,
   FaRssSquare,
   FaLinkedin,
   FaGithubSquare,
@@ -61,11 +60,10 @@ const Icons = styled.div`
 `;
 
 const icons = [
-  { key: 'fb', link: 'https://fb.me/qi.lian.56', img: FaFacebookSquare },
-  { key: 'blog', link: 'https://dotblogs.com.tw/explooosion', img: FaRssSquare },
-  { key: 'linkedin', link: 'https://www.linkedin.com/in/robby-wu-2b26b510a', img: FaLinkedin },
   { key: 'github', link: 'https://github.com/explooosion', img: FaGithubSquare },
   { key: 'gitlab', link: 'https://gitlab.com/explooosion', img: FaGitlab },
+  { key: 'blog', link: 'https://dotblogs.com.tw/explooosion', img: FaRssSquare },
+  { key: 'linkedin', link: 'https://www.linkedin.com/in/robby-wu-2b26b510a', img: FaLinkedin },
   { key: 'codepen', link: 'https://codepen.io/ta7382', img: FaCodepen },
 ];
 
