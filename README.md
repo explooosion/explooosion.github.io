@@ -4,7 +4,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/makes-people-smile.svg)](https://forthebadge.com)
 
-Hi! I'm Robby Wu ([explooosion](https://github.com/explooosion)).
+Hi here! I'm Robby Wu ([explooosion](https://github.com/explooosion)).
 
 ## Theme
 
