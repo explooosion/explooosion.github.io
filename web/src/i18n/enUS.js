@@ -9,11 +9,19 @@ export default {
     'title': `Full-Stack's Front-End Engineer`,
     'edu': 'B. B. A. ,NUTC',
     'intro': `Hi, I'm <b>Robby</b>.<br>
-      I'm from Taichung, Taiwan. I graduated from the National Institute of Technology, Taichung University of Science and Technology.<br><br> I like to research technology, run blogs, and record experiences as articles.
+      I'm from Taichung, Taiwan. I graduated from the National Institute of Technology, Taichung University of Science and Technology.<br><br> I like to research technology, record experiences as articles.
       This website is a personal resume, which records information such as work sharing and technical experience.<br><br> Nice to meet you !`,
     'work': {
       title: 'Work Experiences',
       items: [
+        {
+          'name': `點
+          <i class="far fa-circle"></i>
+          <i class="far fa-circle"></i>
+          <i class="far fa-circle"></i> Inc.`,
+          'job': 'Front-End Engineer',
+          'description': `Use Vue to develop website and follow Github Flow to iterate the code. Assist in building GKE Github Actions.`,
+        },
         {
           'name': `格
           <i class="far fa-circle"></i>
@@ -46,10 +54,15 @@ export default {
   WEB: {
     Front-end: [
       'ES6+',
+      'TS',
       'Vanilla',
       'Angular',
       'React',
-      'Redux',
+      'Redux Saga',
+      'Vuex',
+      'Quasar',
+      'PixiJS',
+      'Webpack',
       'RWD'
       'i18n',
       'GoogleMapAPI',
@@ -59,41 +72,27 @@ export default {
       'Express',
       'Koa2',
       'ASP.NET WebForms',
+      'Socket',
+      'Swagger',
+      'JWT',
     ],
     DevOps: [
-      'AWS(S3, EC2)',
-      'Cloudflare',
+      'GKE',
       'Firebase',
       'VMware EXSI',
+      'Cloudflare',
       'Docker',
+      'Github Actions',
       'Travis',
+      'Reverse Proxy',
       'Git',
-    ],
-    DB: [
-      'MSSQL',
-      'MySQL',
-      'PostgreSQL',
-      'MongoDB',
     ],
     Desktop: [
       'Electron',
       'C# WinForm',
     ],
-    },
-  Computer Science: {
-    Data Mining: [
-      'Weka',
-      'Matlab',
-      'SPSS',
-    ],
-    },
-  Signal: {
-    Physiological: [
-      'Electrocardiography',
-      'surface Electromyography',
-    ],
   },
-  }`,
+}`,
     },
     'side-project': 'Side Project',
     'side-project.works': 'Works',

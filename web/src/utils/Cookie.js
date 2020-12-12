@@ -10,7 +10,7 @@ export const COOKIE_I18N = 'i18n';
  */
 export const setCookie = (key = '', value = null) => {
   if (_.isEmpty(key)) return;
-  Cookies.set(key, value);
+  Cookies.set(key, value, { expires: 365 });
 };
 
 /**

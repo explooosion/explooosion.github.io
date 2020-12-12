@@ -13,6 +13,10 @@ const Select = styled(ReactFlagsSelect)`
   left: 10px;
   user-select: none;
 
+  ul {
+    padding: 0 0.5rem;
+  }
+
   .arrow-down {
     display: none;
     color: #fff;
@@ -27,7 +31,6 @@ const Select = styled(ReactFlagsSelect)`
 const locales = {
   'US': 'English',
   'TW': '繁體中文',
-  'CN': '简体中文',
 };
 
 const locale = getCookie(COOKIE_I18N);

@@ -9,12 +9,11 @@ import { COOKIE_I18N, getCookie, setCookie } from './utils/Cookie';
 // (tip move them in a JSON file and import them)
 import US from './i18n/enUS';
 import TW from './i18n/zhTW';
-import CN from './i18n/zhCN';
 
 let lng = getCookie(COOKIE_I18N);
 lng = _.isNull(lng) ? setCookie(COOKIE_I18N, 'TW') || 'TW' : lng;
 
-const resources = { US, TW, CN };
+const resources = { US, TW };
 
 i18n
   .use(detector)

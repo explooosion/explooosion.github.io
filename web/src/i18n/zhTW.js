@@ -8,10 +8,18 @@ export default {
     'name': '我的名字是 {name}',
     'title': '全端的 Front-End Engineer',
     'edu': '國立臺中科技大學 資訊管理研究所',
-    'intro': `你好，我是 <b>Robby</b>.<br>我來自臺灣的臺中，畢業於國立臺中科技大學資管研究所。<br><br>我喜歡研究技術，也有經營 Blog，把經驗記錄成文章。<br>本網站為個人簡歷介紹，記錄作品分享、技術心得等資訊。<br><br>很高興認識你！`,
+    'intro': `你好，我是 <b>Robby</b>.<br>我來自臺灣的臺中，畢業於國立臺中科技大學資管研究所。<br><br>善於網站開發，也喜歡把經驗記錄成文章。<br>本網站為個人簡歷介紹，記錄作品分享、技術心得等資訊。<br><br>很高興認識你！`,
     'work': {
       title: 'Work Experiences',
       items: [
+        {
+          'name': `點
+          <i class="far fa-circle"></i>
+          <i class="far fa-circle"></i>
+          <i class="far fa-circle"></i> Inc.`,
+          'job': '前端工程師',
+          'description': `使用 Vue 開發電子商務，並依循 Github Flow 迭代程式碼。協助建置 GKE Github Actions。`,
+        },
         {
           'name': `格
           <i class="far fa-circle"></i>
@@ -44,10 +52,15 @@ export default {
   WEB: {
     Front-end: [
       'ES6+',
+      'TS',
       'Vanilla',
       'Angular',
       'React',
-      'Redux',
+      'Redux Saga',
+      'Vuex',
+      'Quasar',
+      'PixiJS',
+      'Webpack',
       'RWD'
       'i18n',
       'GoogleMapAPI',
@@ -57,41 +70,27 @@ export default {
       'Express',
       'Koa2',
       'ASP.NET WebForms',
+      'Socket',
+      'Swagger',
+      'JWT',
     ],
     DevOps: [
-      'AWS(S3, EC2)',
-      'Cloudflare',
+      'GKE',
       'Firebase',
       'VMware EXSI',
+      'Cloudflare',
       'Docker',
+      'Github Actions',
       'Travis',
+      'Reverse Proxy',
       'Git',
-    ],
-    DB: [
-      'MSSQL',
-      'MySQL',
-      'PostgreSQL',
-      'MongoDB',
     ],
     Desktop: [
       'Electron',
       'C# WinForm',
     ],
-    },
-  Computer Science: {
-    Data Mining: [
-      'Weka',
-      'Matlab',
-      'SPSS',
-    ],
-    },
-  Signal: {
-    Physiological: [
-      'Electrocardiography',
-      'surface Electromyography',
-    ],
   },
-  }`,
+}`,
     },
     'side-project': 'Side Project',
     'side-project.works': '相關作品',
