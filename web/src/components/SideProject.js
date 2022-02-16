@@ -11,7 +11,6 @@ const Section = styled(SectionBase)`
 
 const works = `{
   WEB: [
-    <a href="https://www.crossingfrontier.com" target="_blank">'CrossingFrontier'</a>,
     <a href="https://github.com/explooosion/browndust-share" target="_blank">'Brown Dust Formation Sharing'</a>,
     <a href="https://github.com/explooosion/poe-hideout-sharing" target="_blank">'POE Hideout Sharing'</a>,
     <a href="https://github.com/explooosion/Taiwan-AIRMap" target="_blank">'Taiwan-AIRMap'</a>,
@@ -30,10 +29,8 @@ const works = `{
 
 const packages = `{
   NPM PACKAGES: [
-    <a href="https://github.com/explooosion/hitarea-shapes" target="_blank">'hitarea-shapes'</a>,
     <a href="https://www.npmjs.com/package/agm-direction" target="_blank">'Agm-Direction'</a>,
     <a href="https://www.npmjs.com/package/etherealcss" target="_blank">'etherealcss'</a>,
-    <a href="https://www.npmjs.com/package/koa-deploy" target="_blank">'koa-deploy'</a>,
   ],
   VSCODE EXTENSIONS: [
     <a href="https://marketplace.visualstudio.com/items?itemName=robby.poe-hideout-syntax" target="_blank">'POE Hideout Syntax'</a>,

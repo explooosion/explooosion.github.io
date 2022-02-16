@@ -7,13 +7,13 @@ import { COOKIE_I18N, getCookie, setCookie } from './utils/Cookie';
 
 // the translations
 // (tip move them in a JSON file and import them)
-import US from './i18n/enUS';
+// import US from './i18n/enUS';
 import TW from './i18n/zhTW';
 
 let lng = getCookie(COOKIE_I18N);
 lng = _.isNull(lng) ? setCookie(COOKIE_I18N, 'TW') || 'TW' : lng;
 
-const resources = { US, TW };
+const resources = { /* US,*/  TW };
 
 i18n
   .use(detector)

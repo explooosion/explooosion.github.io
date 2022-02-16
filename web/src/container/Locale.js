@@ -29,7 +29,7 @@ const Select = styled(ReactFlagsSelect)`
 `;
 
 const locales = {
-  'US': 'English',
+  // 'US': 'English',
   'TW': '繁體中文',
 };
 

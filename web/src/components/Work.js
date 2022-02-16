@@ -14,7 +14,7 @@ function Work() {
   const { title, items } = t('work');
 
   const renderWork = (work, index) => {
-    const { name, job, description } = work;
+    const { name, job } = work;
     return (
       <li key={index}>
         <h3
@@ -23,7 +23,6 @@ function Work() {
           {htmlReactParser(name)}
         </h3>
         <h3><tt className='chinese'>{htmlReactParser(job)}</tt></h3>
-        <p>{htmlReactParser(description)}</p>
       </li>
     )
   }
