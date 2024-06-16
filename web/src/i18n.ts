@@ -8,6 +8,7 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
+    lng: 'zh',
     fallbackLng: 'zh',
     debug: false,
     interpolation: {
