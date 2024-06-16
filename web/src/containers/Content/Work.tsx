@@ -57,7 +57,7 @@ const Work = memo(function Work() {
       <ul className="list-disc pl-6">
         {companies.map(company => <Company key={company.name} data={company} />)}
       </ul>
-      <hr className="mt-4 mb-8" />
+      <hr className="my-8" />
     </section>
   );
 });

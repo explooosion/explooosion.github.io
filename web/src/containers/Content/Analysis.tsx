@@ -32,7 +32,7 @@ const Item = memo(function Item({ data }: { data: IItem }) {
           </a>
         </div>
       </h3>
-      <div dangerouslySetInnerHTML={{ __html: renderEmbed }} />
+      <div className="overflow-auto max-w-[75vw]" dangerouslySetInnerHTML={{ __html: renderEmbed }} />
     </li>
   )
 });
@@ -51,7 +51,7 @@ const Analysis = memo(function Analysis() {
       <ul className="list-disc pl-6">
         {datas.map(data => <Item key={data.name} data={data} />)}
       </ul>
-      <hr className="mt-4 mb-8" />
+      <hr className="my-8" />
     </section>
   );
 });

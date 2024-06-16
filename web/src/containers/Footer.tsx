@@ -2,7 +2,7 @@ import { memo } from 'react';
 
 const Footer = memo(function Footer() {
   return (
-    <footer className="fixed bottom-9 w-[270px] text-xs text-gray-400">
+    <footer className="lg:fixed lg:bottom-9 w-[270px] pb-8 lg:pb-0 text-xs text-gray-400">
       <div>Hosted on GitHub Pages</div>
       <div>
         &mdash; Theme modified from

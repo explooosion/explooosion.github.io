@@ -40,7 +40,7 @@ const Icons = memo(function Icons() {
   ];
 
   return (
-    <div className="flex items-center justify-between w-4/5">
+    <div className="flex items-center justify-between w-4/5 max-w-[250px]">
       {resources.map(
         resource => <Icon key={resource.key} resource={resource} />
       )}

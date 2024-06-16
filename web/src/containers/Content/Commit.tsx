@@ -15,7 +15,7 @@ const Commit = memo(function Commit() {
           loading="lazy"
         />
       </a>
-      <hr className="my-2" />
+      <hr className="my-8" />
     </section>
   );
 });

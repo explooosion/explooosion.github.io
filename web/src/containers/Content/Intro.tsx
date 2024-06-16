@@ -9,7 +9,7 @@ const Intro = memo(function Intro() {
     <section>
       <h1 className="my-4 text-3xl text-gray-800 font-medium tracking-in-contract-bck">Hi !</h1>
       <p className="text-gray-600" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(t('content.intro.greet')) }} />
-      <hr className="mt-4 mb-8" />
+      <hr className="my-8" />
     </section>
   );
 });

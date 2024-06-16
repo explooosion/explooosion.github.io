@@ -36,7 +36,7 @@ const Skill = memo(function Work() {
       <ul className="list-disc pl-6">
         {datas.map(data => <Item key={data.name} data={data} />)}
       </ul>
-      <hr className="mt-4 mb-8" />
+      <hr className="my-8" />
     </section>
   );
 });
