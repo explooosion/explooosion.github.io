@@ -66,7 +66,7 @@
       ]
     },
     "case": {
-      "title": "專案",
+      "title": "專案創作",
       "projects": [
         {
           "name": "作品開發",
@@ -88,7 +88,7 @@
       ]
     },
     "activity": {
-      "title": "活動",
+      "title": "活動參與",
       "events": [
         {
           "name": "書籍著作",
