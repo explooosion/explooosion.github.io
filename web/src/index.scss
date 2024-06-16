@@ -1,3 +1,15 @@
-@import '~react-flags-select/css/react-flags-select.css';
-@import '~csshake/dist/csshake.min.css';
-@import './scss/index';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'styles';
+
+@layer base {
+  html, body {
+    @apply text-gray-700 font-sans text-base z-0;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}

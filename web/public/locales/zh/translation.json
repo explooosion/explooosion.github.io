@@ -1,0 +1,114 @@
+{
+  "header": {
+    "profile": {
+      "job": "全端的 Front-End Engineer",
+      "school": "國立臺中科技大學 資訊管理研究所"
+    }
+  },
+  "content": {
+    "intro": {
+      "greet": "你好，我是 Robby！<br />我來自臺灣，畢業於國立臺中科技大學資管研究所。<br />目前任職於 Mapxus，期許在這舞台發光發熱。<br />很高興認識你！"
+    },
+    "work": {
+      "title": "工作經歷",
+      "companies": [
+        {
+          "name": "台灣蜂圖誌科技有限公司",
+          "link": "https://www.mapxus.com/",
+          "job": "前端工程師",
+          "period": "2024.06 ~ 至今",
+          "description": "Mapxus 提供創新室內地圖和導航解決方案，幫助用戶在複雜室內環境中輕鬆導航。技術廣泛應用於購物中心、機場和醫院等大型場所，提升用戶體驗。"
+        },
+        {
+          "name": "台灣聯繫科技有限公司",
+          "link": "https://www.linkage-retail.com/",
+          "job": "技術總監 (台灣團隊領導)、前端工程師",
+          "period": "2020.10 ~ 2024.01",
+          "description": "專注於提供零售業數位轉型解決方案的香港子公司。在團隊中，我負責組織領導、人員編列，並且承接國際專案、技術開發。"
+        },
+        {
+          "name": "艾維德康股份有限公司",
+          "link": "https://www.104.com.tw/company/1a2x6blm15",
+          "job": "全端工程師 (外包)",
+          "period": "2023.11 ~ 2023.12",
+          "description": "這是一款多人線上格鬥遊戲「 盡界戰線 - Crossing Frontier 」，我負責官方網站、事前預約網站的建置，使用 React.js 與 Vue.js 等技術建置網站。"
+        },
+        {
+          "name": "有病制作所股份有限公司",
+          "link": "https://www.sick-game.com/",
+          "job": "網頁遊戲工程師 (外包)",
+          "period": "2020.09 ~ 2021.12",
+          "description": "致力於遊戲「 我滿懷歧異的意識代碼 」專案開發。程式開發框架選用 Pixi.js 進行迭代，我主要負責遊戲場景、互動等開發。"
+        },
+        {
+          "name": "雍盛科技股份有限公司",
+          "link": "https://www.ysong.com.tw/ysong/",
+          "job": "全端工程師",
+          "period": "2015.07 ~ 2016.09",
+          "description": "參與政府標案 GIS 系統建置、規則書撰寫，也奠定了我對 GIS 領域的知識。"
+        },
+        {
+          "name": "開原報關股份有限公司",
+          "link": "http://www.kycs.com.tw/",
+          "job": "資訊助理工程師",
+          "period": "2013.10 ~ 2015.06",
+          "description": "在報關公司的資訊部門擔任助理，日常多為 MIS 工作。在程式設計起跑點上，我永遠感謝前輩推薦的書單《 大話設計模式 》。"
+        }
+      ]
+    },
+    "skill": {
+      "title": "專業技能",
+      "items": [
+        {
+          "name": "網頁開發",
+          "code": "{\n  \"frontEnd\": [\n    \"React.js with Redux\",\n    \"Vue.js with Pinia\"\n  ],\n  \"backEnd\": [\n    \"Node.js with Express.js, Koa\"\n  ],\n  \"devOps\": [\n    \"Github Actions\"\n  ]\n}"
+        }
+      ]
+    },
+    "case": {
+      "title": "專案",
+      "projects": [
+        {
+          "name": "作品開發",
+          "code": "{\n  \"website\": [\n    \"<a href=\\\"https://github.com/explooosion/browndust-share\\\" target=\\\"_blank\\\">'Brown Dust Formation Sharing'</a>\",\n    \"<a href=\\\"https://github.com/explooosion/poe-hideout-sharing\\\" target=\\\"_blank\\\">'POE Hideout Sharing'</a>\",\n    \"<a href=\\\"https://github.com/explooosion/Taiwan-AIRMap\\\" target=\\\"_blank\\\">'Taiwan-AIRMap'</a>\",\n    \"<a href=\\\"https://github.com/EtherealCSS/etherealcss\\\" target=\\\"_blank\\\">'EtherealCSS'</a>\",\n    \"<a href=\\\"https://github.com/explooosion/NobuMD\\\" target=\\\"_blank\\\">'Dota2 信長的野望'</a>\"\n  ],\n  \"application\": [\n    \"<a href=\\\"https://github.com/explooosion/electron-alarm-clock\\\" target=\\\"_blank\\\">'Electron Alarm Clock'</a>\",\n    \"<a href=\\\"https://github.com/explooosion/ElswordVoice\\\" target=\\\"_blank\\\">'ElswordVoice'</a>\"\n  ],\n  \"document\": [\n    \"<a href=\\\"https://github.com/explooosion/Agm-Direction-Docs\\\" target=\\\"_blank\\\">'Agm-Direction-Docs'</a>\",\n    \"<a href=\\\"https://remakeaonteam.github.io/AON-Developer-Guide/\\\" target=\\\"_blank\\\">'AON-Developer-Guide'</a>\"\n  ]\n}"
+        },
+        {
+          "name": "套件與擴充功能",
+          "code": "{\n  \"packages\": [\n    \"<a href=\\\"https://www.npmjs.com/package/agm-direction\\\" target=\\\"_blank\\\">'Agm-Direction'</a>\",\n    \"<a href=\\\"https://www.npmjs.com/package/etherealcss\\\" target=\\\"_blank\\\">'etherealcss'</a>\"\n  ],\n  \"extensions\": [\n    \"<a href=\\\"https://marketplace.visualstudio.com/items?itemName=robby.poe-hideout-syntax\\\" target=\\\"_blank\\\">'POE Hideout Syntax'</a>\",\n    \"<a href=\\\"https://marketplace.visualstudio.com/items?itemName=robby.poe-filter\\\" target=\\\"_blank\\\">'POE Filter Syntax'</a>\"\n  ]\n}"
+        }
+      ]
+    },
+    "blog": {
+      "title": "技術文章",
+      "articles": [
+        {
+          "name": "點部落",
+          "code": "{\n  \"2023\": [\n    \"<a href=\\\"https://dotblogs.com.tw/explooosion/2023/07/08/164809\\\" target=\\\"_blank\\\">'Git - 在工作與私人專案中來回切換 SSH'</a>\",\n    \"<a href=\\\"https://dotblogs.com.tw/explooosion/2023/06/24/021757\\\" target=\\\"_blank\\\">'TypeScript - 在 interface 中理解 Pick, Omit...'</a>\"\n  ],\n  \"2021\": [\n    \"<a href=\\\"https://dotblogs.com.tw/explooosion/2021/09/08/223834\\\" target=\\\"_blank\\\">'GCP - Verify Google SSL certificates'</a>\",\n    \"<a href=\\\"https://dotblogs.com.tw/explooosion/2021/07/08/003926\\\" target=\\\"_blank\\\">'Kubectl - 利用 kubectl-graph 視覺化資源...'</a>\"\n  ],\n  \"2020\": [\n    \"<a href=\\\"https://dotblogs.com.tw/explooosion/2020/12/12/041028\\\" target=\\\"_blank\\\">'Vue - Extend Vue component ...'</a>\",\n    \"<a href=\\\"https://dotblogs.com.tw/explooosion/2020/10/10/040358\\\" target=\\\"_blank\\\">'GCP - 使用 Github Actions 部署 React 到 GKE'</a>\"\n  ],\n  \"2018\": [\n    \"<a href=\\\"https://dotblogs.com.tw/explooosion/2018/09/30/141005\\\" target=\\\"_blank\\\">'CSS - 運用 Stylelint 養成好習慣'</a>\",\n    \"<a href=\\\"https://dotblogs.com.tw/explooosion/2018/01/21/040728\\\" target=\\\"_blank\\\">'MongoDB - 詳細到讓人牙起來的安裝教學'</a>\"\n  ]\n}"
+        }
+      ]
+    },
+    "activity": {
+      "title": "活動",
+      "events": [
+        {
+          "name": "書籍著作",
+          "code": "{\n  \"2017\": [\n    \"<a href=\\\"https://www.eslite.com/product/1001301192620407\\\" target=\\\"_blank\\\">'Angular2 其實可以很簡單：實務範例教學'</a>\"\n  ]\n}"
+        },
+        {
+          "name": "比賽經歷",
+          "code": "{\n  \"2017\": [\n    \"<a href=\\\"https://www.accupass.com/event/1710260630563716620400\\\" target=\\\"_blank\\\">'新竹黑客松'</a> - <a href=\\\"https://github.com/explooosion/HsinchuHackathon\\\" target=\\\"_blank\\\">GitHub</a>\",\n    \"<a href=\\\"https://www.accupass.com/event/1704140234301547836531\\\" target=\\\"_blank\\\">'嘉義黑蚵松'</a> - <a href=\\\"https://github.com/explooosion/ChiayiHackathon\\\" target=\\\"_blank\\\">GitHub</a>\"\n  ]\n}"
+        }
+      ]
+    },
+    "analysis": {
+      "title": "綜合分析",
+      "items": [
+        {
+          "name": "github-profile-summary",
+          "link": "https://github.com/IonicaBizau/github-profile-languages",
+          "embed": "<iframe width=\\\"600\\\" height=\\\"600\\\" src=\\\"https://ionicabizau.github.io/github-profile-languages/api.html?@explooosion\\\"></iframe>"
+        }
+      ]
+    }
+  }
+}
