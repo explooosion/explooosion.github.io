@@ -1,0 +1,114 @@
+{
+  "header": {
+    "profile": {
+      "job": "Full-Stack Front-End Engineer",
+      "school": "M.S. in Information Management, NTCUST"
+    }
+  },
+  "content": {
+    "intro": {
+      "greet": "Hello, I'm Robby!<br />I come from Taiwan and graduated from the Graduate Institute of Information Management at the National Taichung University of Science and Technology.<br />I am currently working at Mapxus, and I look forward to making a significant impact in this field.<br />Nice to meet you!"
+    },
+    "work": {
+      "title": "Work Experiences",
+      "companies": [
+        {
+          "name": "Taiwan Mapxus Technology Limited",
+          "link": "https://www.mapxus.com/",
+          "job": "Front-End Engineer",
+          "period": "2024.06 ~ Now",
+          "description": "Mapxus provides innovative indoor mapping and navigation solutions, helping users navigate complex indoor environments with ease. The technology is widely used in large venues such as shopping malls, airports, and hospitals, enhancing user experience."
+        },
+        {
+          "name": "Linkage Retail Solutions Limited",
+          "link": "https://www.linkage-retail.com/",
+          "job": "Technical Manager (Head of Taiwan), Front-End Engineer",
+          "period": "2020.10 ~ 2024.01",
+          "description": "A Hong Kong subsidiary focused on providing digital transformation solutions for the retail industry. In the team, I was responsible for organization leadership, personnel management, and undertaking international projects and technical development."
+        },
+        {
+          "name": "Avidcon Co., Ltd.",
+          "link": "https://www.104.com.tw/company/1a2x6blm15",
+          "job": "Full-Stack Engineer (Outsourced)",
+          "period": "2023.11 ~ 2023.12",
+          "description": "This is a multiplayer online fighting game 'Crossing Frontier'. I was responsible for building the official website and the pre-registration website using technologies like React.js and Vue.js."
+        },
+        {
+          "name": "Sick Games Co., Ltd.",
+          "link": "https://www.sick-game.com/",
+          "job": "Web Game Engineer (Outsourced)",
+          "period": "2020.09 ~ 2021.12",
+          "description": "Dedicated to the development of the game 'I Am the Code of Consciousness'. The development framework was iterated using Pixi.js, and I was mainly responsible for the development of game scenes and interactions."
+        },
+        {
+          "name": "Ysong Technology Co., Ltd.",
+          "link": "https://www.ysong.com.tw/ysong/",
+          "job": "Full-Stack Engineer",
+          "period": "2015.07 ~ 2016.09",
+          "description": "Participated in government projects for GIS system construction and documentation, which also laid the foundation for my knowledge in the GIS field."
+        },
+        {
+          "name": "Kai Yuan Customs Broker Co., Ltd.",
+          "link": "http://www.kycs.com.tw/",
+          "job": "Assistant Information Engineer",
+          "period": "2013.10 ~ 2015.06",
+          "description": "Worked as an assistant in the information department of a customs brokerage company, mainly handling MIS tasks. At the starting point of my programming career, I am always grateful for the book recommendations from my mentors, especially《 大話設計模式 》."
+        }
+      ]
+    },
+    "skill": {
+      "title": "Skills",
+      "items": [
+        {
+          "name": "Web Development",
+          "code": "{\n  \"frontEnd\": [\n    \"React.js with Redux\",\n    \"Vue.js with Pinia\"\n  ],\n  \"backEnd\": [\n    \"Node.js with Express.js, Koa\"\n  ],\n  \"devOps\": [\n    \"Github Actions\"\n  ]\n}"
+        }
+      ]
+    },
+    "case": {
+      "title": "Side Projects",
+      "projects": [
+        {
+          "name": "Projects",
+          "code": "{\n  \"website\": [\n    \"<a href=\\\"https://github.com/explooosion/browndust-share\\\" target=\\\"_blank\\\">'Brown Dust Formation Sharing'</a>\",\n    \"<a href=\\\"https://github.com/explooosion/poe-hideout-sharing\\\" target=\\\"_blank\\\">'POE Hideout Sharing'</a>\",\n    \"<a href=\\\"https://github.com/explooosion/Taiwan-AIRMap\\\" target=\\\"_blank\\\">'Taiwan-AIRMap'</a>\",\n    \"<a href=\\\"https://github.com/EtherealCSS/etherealcss\\\" target=\\\"_blank\\\">'EtherealCSS'</a>\",\n    \"<a href=\\\"https://github.com/explooosion/NobuMD\\\" target=\\\"_blank\\\">'Dota2 信長的野望'</a>\"\n  ],\n  \"application\": [\n    \"<a href=\\\"https://github.com/explooosion/electron-alarm-clock\\\" target=\\\"_blank\\\">'Electron Alarm Clock'</a>\",\n    \"<a href=\\\"https://github.com/explooosion/ElswordVoice\\\" target=\\\"_blank\\\">'ElswordVoice'</a>\"\n  ],\n  \"document\": [\n    \"<a href=\\\"https://github.com/explooosion/Agm-Direction-Docs\\\" target=\\\"_blank\\\">'Agm-Direction-Docs'</a>\",\n    \"<a href=\\\"https://remakeaonteam.github.io/AON-Developer-Guide/\\\" target=\\\"_blank\\\">'AON-Developer-Guide'</a>\"\n  ]\n}"
+        },
+        {
+          "name": "Packages and Extensions",
+          "code": "{\n  \"packages\": [\n    \"<a href=\\\"https://www.npmjs.com/package/agm-direction\\\" target=\\\"_blank\\\">'Agm-Direction'</a>\",\n    \"<a href=\\\"https://www.npmjs.com/package/etherealcss\\\" target=\\\"_blank\\\">'etherealcss'</a>\"\n  ],\n  \"extensions\": [\n    \"<a href=\\\"https://marketplace.visualstudio.com/items?itemName=robby.poe-hideout-syntax\\\" target=\\\"_blank\\\">'POE Hideout Syntax'</a>\",\n    \"<a href=\\\"https://marketplace.visualstudio.com/items?itemName=robby.poe-filter\\\" target=\\\"_blank\\\">'POE Filter Syntax'</a>\"\n  ]\n}"
+        }
+      ]
+    },
+    "blog": {
+      "title": "Technical Articles",
+      "articles": [
+        {
+          "name": "dotblogs",
+          "code": "{\n  \"2023\": [\n    \"<a href=\\\"https://dotblogs.com.tw/explooosion/2023/07/08/164809\\\" target=\\\"_blank\\\">'Git - 在工作與私人專案中來回切換 SSH'</a>\",\n    \"<a href=\\\"https://dotblogs.com.tw/explooosion/2023/06/24/021757\\\" target=\\\"_blank\\\">'TypeScript - 在 interface 中理解 Pick, Omit...'</a>\"\n  ],\n  \"2021\": [\n    \"<a href=\\\"https://dotblogs.com.tw/explooosion/2021/09/08/223834\\\" target=\\\"_blank\\\">'GCP - Verify Google SSL certificates'</a>\",\n    \"<a href=\\\"https://dotblogs.com.tw/explooosion/2021/07/08/003926\\\" target=\\\"_blank\\\">'Kubectl - 利用 kubectl-graph 視覺化資源...'</a>\"\n  ],\n  \"2020\": [\n    \"<a href=\\\"https://dotblogs.com.tw/explooosion/2020/12/12/041028\\\" target=\\\"_blank\\\">'Vue - Extend Vue component ...'</a>\",\n    \"<a href=\\\"https://dotblogs.com.tw/explooosion/2020/10/10/040358\\\" target=\\\"_blank\\\">'GCP - 使用 Github Actions 部署 React 到 GKE'</a>\"\n  ],\n  \"2018\": [\n    \"<a href=\\\"https://dotblogs.com.tw/explooosion/2018/09/30/141005\\\" target=\\\"_blank\\\">'CSS - 運用 Stylelint 養成好習慣'</a>\",\n    \"<a href=\\\"https://dotblogs.com.tw/explooosion/2018/01/21/040728\\\" target=\\\"_blank\\\">'MongoDB - 詳細到讓人牙起來的安裝教學'</a>\"\n  ]\n}"
+        }
+      ]
+    },
+    "activity": {
+      "title": "Events",
+      "events": [
+        {
+          "name": "Published Books",
+          "code": "{\n  \"2017\": [\n    \"<a href=\\\"https://www.eslite.com/product/1001301192620407\\\" target=\\\"_blank\\\">'Angular2 其實可以很簡單：實務範例教學'</a>\"\n  ]\n}"
+        },
+        {
+          "name": "Competition Experience",
+          "code": "{\n  \"2017\": [\n    \"<a href=\\\"https://www.accupass.com/event/1710260630563716620400\\\" target=\\\"_blank\\\">'新竹黑客松'</a> - <a href=\\\"https://github.com/explooosion/HsinchuHackathon\\\" target=\\\"_blank\\\">GitHub</a>\",\n    \"<a href=\\\"https://www.accupass.com/event/1704140234301547836531\\\" target=\\\"_blank\\\">'嘉義黑蚵松'</a> - <a href=\\\"https://github.com/explooosion/ChiayiHackathon\\\" target=\\\"_blank\\\">GitHub</a>\"\n  ]\n}"
+        }
+      ]
+    },
+    "analysis": {
+      "title": "Comprehensive Analysis",
+      "items": [
+        {
+          "name": "github-profile-summary",
+          "link": "https://github.com/IonicaBizau/github-profile-languages",
+          "embed": "<iframe width=\\\"600\\\" height=\\\"600\\\" src=\\\"https://ionicabizau.github.io/github-profile-languages/api.html?@explooosion\\\"></iframe>"
+        }
+      ]
+    }
+  }
+}
