@@ -34,6 +34,9 @@
 
  code[class*="language-"],
  pre[class*="language-"] {
+
+   max-width: 75vw;
+
    background: hsl(230, 1%, 98%);
    color: hsl(230, 8%, 24%);
    font-size: 14px;
