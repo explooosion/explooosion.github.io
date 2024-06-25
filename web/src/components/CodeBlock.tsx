@@ -6,7 +6,7 @@ import './CodeBlock.css';
 
 const PureHtml = memo(function PureHtml({ code }: { code: string }) {
   return (
-    <pre className="pure-html" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(code, { ADD_ATTR: ['target'] }) }} />
+    <pre className="pure-html" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(code.replace(/\\"/g, '"'), { ADD_ATTR: ['target', 'href'] }) }} />
   );
 });
 
