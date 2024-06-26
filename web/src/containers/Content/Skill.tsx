@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FaPaintBrush } from 'react-icons/fa';
+import { FaPaintBrush, FaLink } from 'react-icons/fa';
 
 import CodeBlock from '../../components/CodeBlock';
 
@@ -36,20 +36,24 @@ const Skill = memo(function Work() {
       <ul className="list-disc pl-6">
         <li className="pl-2 mb-8 text-lg">
           <h3 className="mb-2 font-medium">
-            <div>{t('content.skill.languages')}</div>
+            <div className="flex items-center">
+              {t('content.skill.languages')}
+              <a
+                className="inline-block ml-3 text-blue-400 hover:text-blue-600"
+                rel="noopener noreferrer"
+                target="_blank"
+                href={'https://github-readme-stats.vercel.app'}
+              >
+                <FaLink />
+              </a>
+            </div>
           </h3>
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href='https://github-readme-stats.vercel.app'
-          >
-            <img
-              src={`https://github-readme-stats.vercel.app/api/top-langs?username=explooosion&show_icons=true&locale=${i18n.language === 'en' ? i18n.language : i18n.language + '-tw'}&layout=compact`}
-              alt={`Robby's Github chart`}
-              title={`Robby's Github chart`}
-              loading="lazy"
-            />
-          </a>
+          <img
+            src={`https://github-readme-stats.vercel.app/api/top-langs?username=explooosion&show_icons=true&locale=${i18n.language === 'en' ? i18n.language : i18n.language + '-tw'}&layout=compact`}
+            alt={`Robby's Github chart`}
+            title={`Robby's Github chart`}
+            loading="lazy"
+          />
         </li>
         {datas.map(data => <Item key={data.name} data={data} />)}
       </ul>

@@ -63,18 +63,12 @@ const Analysis = memo(function Analysis() {
               </a>
             </div>
           </h3>
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href='https://github-profile-trophy.vercel.app'
-          >
-            <img
-              src='https://github-profile-trophy.vercel.app/?username=explooosion&row=2&column=4'
-              alt={`Robby's Github chart`}
-              title={`Robby's Github chart`}
-              loading="lazy"
-            />
-          </a>
+          <img
+            src='https://github-profile-trophy.vercel.app/?username=explooosion&row=2&column=4'
+            alt={`Robby's Github chart`}
+            title={`Robby's Github chart`}
+            loading="lazy"
+          />
         </li>
         {datas.map(data => <Item key={data.name} data={data} />)}
       </ul>
