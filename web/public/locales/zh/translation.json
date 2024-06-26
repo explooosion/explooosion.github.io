@@ -58,6 +58,7 @@
     },
     "skill": {
       "title": "專業技能",
+      "languages": "程式語言",
       "items": [
         {
           "name": "網頁開發",

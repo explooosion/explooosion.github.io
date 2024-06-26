@@ -58,6 +58,7 @@
     },
     "skill": {
       "title": "Skills",
+      "languages": "Programming Languages",
       "items": [
         {
           "name": "Web Development",
