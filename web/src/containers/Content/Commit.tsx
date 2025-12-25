@@ -1,12 +1,10 @@
 import { memo } from 'react';
-import { useTranslation } from 'react-i18next';
 
 const Commit = memo(function Commit() {
-  const { i18n } = useTranslation();
-
   return (
     <section>
-      <a
+      {/* https://github.com/anuraghazra/github-readme-stats?tab=readme-ov-file#important-notices- */}
+      {/* <a
         rel="noopener noreferrer"
         target="_blank"
         href='https://github-readme-stats.vercel.app'
@@ -18,7 +16,7 @@ const Commit = memo(function Commit() {
           loading="lazy"
         />
       </a>
-      <hr className="my-8" />
+      <hr className="my-8" /> */}
       <a
         rel="noopener noreferrer"
         target="_blank"

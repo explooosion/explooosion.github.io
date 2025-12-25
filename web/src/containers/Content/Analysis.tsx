@@ -49,7 +49,8 @@ const Analysis = memo(function Analysis() {
         <FaChartPie /><span className="ml-2 text-gray-900">{t('content.analysis.title')}</span>
       </h2>
       <ul className="list-disc pl-6">
-        <li className="pl-2 mb-8 text-lg">
+        {/* https://github.com/ryo-ma/github-profile-trophy */}
+        {/* <li className="pl-2 mb-8 text-lg">
           <h3 className="mb-2 font-medium">
             <div className="flex items-center">
               github-profile-trophy
@@ -69,7 +70,7 @@ const Analysis = memo(function Analysis() {
             title={`Robby's Github chart`}
             loading="lazy"
           />
-        </li>
+        </li> */}
         {datas.map(data => <Item key={data.name} data={data} />)}
       </ul>
       <hr className="my-8" />
