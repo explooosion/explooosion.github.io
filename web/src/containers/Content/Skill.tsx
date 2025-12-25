@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FaPaintBrush, FaLink } from 'react-icons/fa';
+import { FaPaintBrush } from 'react-icons/fa';
 
 import CodeBlock from '../../components/CodeBlock';
 
@@ -24,7 +24,7 @@ const Item = memo(function Item({ data }: { data: ISkill }) {
 
 const Skill = memo(function Work() {
 
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const datas: ISkill[] = t('content.skill.items', { returnObjects: true }) ?? [];
 
@@ -34,7 +34,8 @@ const Skill = memo(function Work() {
         <FaPaintBrush /><span className="ml-2 text-gray-900">{t('content.skill.title')}</span>
       </h2>
       <ul className="list-disc pl-6">
-        <li className="pl-2 mb-8 text-lg">
+        {/* https://github.com/anuraghazra/github-readme-stats?tab=readme-ov-file#important-notices- */}
+        {/* <li className="pl-2 mb-8 text-lg">
           <h3 className="mb-2 font-medium">
             <div className="flex items-center">
               {t('content.skill.languages')}
@@ -54,7 +55,7 @@ const Skill = memo(function Work() {
             title={`Robby's Github chart`}
             loading="lazy"
           />
-        </li>
+        </li> */}
         {datas.map(data => <Item key={data.name} data={data} />)}
       </ul>
       <hr className="my-8" />

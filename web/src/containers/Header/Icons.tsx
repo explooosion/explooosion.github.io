@@ -1,12 +1,13 @@
 import { memo } from "react";
 import {
   FaSquareGithub,
-  FaSquareGitlab,
+  // FaSquareGitlab,
   FaLinkedin,
   FaSquareRss,
-  FaCodepen,
+  // FaCodepen,
   FaInbox,
-  FaSquareYoutube,
+  FaSquareInstagram,
+  // FaSquareYoutube,
 } from "react-icons/fa6";
 import { IconType } from "react-icons/lib";
 
@@ -37,11 +38,11 @@ const Icons = memo(function Icons() {
       link: "https://github.com/explooosion",
       img: FaSquareGithub,
     },
-    {
-      key: "gitlab",
-      link: "https://gitlab.com/explooosion",
-      img: FaSquareGitlab,
-    },
+    // {
+    //   key: "gitlab",
+    //   link: "https://gitlab.com/explooosion",
+    //   img: FaSquareGitlab,
+    // },
     {
       key: "blog",
       link: "https://dotblogs.com.tw/explooosion",
@@ -52,12 +53,17 @@ const Icons = memo(function Icons() {
       link: "https://www.linkedin.com/in/robby-wu-2b26b510a",
       img: FaLinkedin,
     },
-    { key: "codepen", link: "https://codepen.io/ta7382", img: FaCodepen },
+    // { key: "codepen", link: "https://codepen.io/ta7382", img: FaCodepen },
     {
-      key: "youtube",
-      link: "https://www.youtube.com/@robbywu570",
-      img: FaSquareYoutube,
+      key: "instagram",
+      link: "https://www.instagram.com/robby.570.drone/",
+      img: FaSquareInstagram,
     },
+    // {
+    //   key: "youtube",
+    //   link: "https://www.youtube.com/@robbywu570",
+    //   img: FaSquareYoutube,
+    // },
     { key: "email", link: "mailto:ta7382@gmail.com", img: FaInbox },
   ];
 
