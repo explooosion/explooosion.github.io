@@ -26,7 +26,7 @@ const Activity = memo(function Work() {
 
   const { t } = useTranslation();
 
-  const datas: IEvent[] = t('content.activity.events', { returnObjects: true }) ?? [];
+  const datas: IEvent[] = (t('content.activity.events', { returnObjects: true }) as IEvent[]) ?? [];
 
   return (
     <section className="relative fade-in">

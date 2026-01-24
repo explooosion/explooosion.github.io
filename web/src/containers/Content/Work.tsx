@@ -47,7 +47,7 @@ const Work = memo(function Work() {
 
   const { t } = useTranslation();
 
-  const companies: ICompany[] = t('content.work.companies', { returnObjects: true }) ?? [];
+  const companies: ICompany[] = (t('content.work.companies', { returnObjects: true }) as ICompany[]) ?? [];
 
   return (
     <section className="relative fade-in">

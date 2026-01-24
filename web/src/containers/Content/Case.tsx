@@ -26,7 +26,7 @@ const Case = memo(function Work() {
 
   const { t } = useTranslation();
 
-  const datas: ICase[] = t('content.case.projects', { returnObjects: true }) ?? [];
+  const datas: ICase[] = (t('content.case.projects', { returnObjects: true }) as ICase[]) ?? [];
 
   return (
     <section className="relative fade-in">
