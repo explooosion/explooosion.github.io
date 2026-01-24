@@ -446,9 +446,9 @@
 
  /* Custom styles */
  pre[class*="pure-html"] a {
-  @apply text-blue-400;
+  color: #60a5fa;
 }
 
 pre[class*="pure-html"] a:hover {
-  @apply text-blue-600;
+  color: #2563eb;
 }

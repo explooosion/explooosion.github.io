@@ -26,7 +26,7 @@ const Blog = memo(function Work() {
 
   const { t } = useTranslation();
 
-  const datas: IArticle[] = t('content.blog.articles', { returnObjects: true }) ?? [];
+  const datas: IArticle[] = (t('content.blog.articles', { returnObjects: true }) as IArticle[]) ?? [];
 
   return (
     <section className="relative fade-in">

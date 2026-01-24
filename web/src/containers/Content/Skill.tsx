@@ -26,7 +26,7 @@ const Skill = memo(function Work() {
 
   const { t } = useTranslation();
 
-  const datas: ISkill[] = t('content.skill.items', { returnObjects: true }) ?? [];
+  const datas: ISkill[] = (t('content.skill.items', { returnObjects: true }) as ISkill[]) ?? [];
 
   return (
     <section className="relative fade-in">

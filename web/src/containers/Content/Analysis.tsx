@@ -41,7 +41,7 @@ const Analysis = memo(function Analysis() {
 
   const { t } = useTranslation();
 
-  const datas: IItem[] = t('content.analysis.items', { returnObjects: true }) ?? [];
+  const datas: IItem[] = (t('content.analysis.items', { returnObjects: true }) as IItem[]) ?? [];
 
   return (
     <section className="relative fade-in">

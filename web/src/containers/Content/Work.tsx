@@ -36,6 +36,7 @@ const Company = memo(function Company({ data }: { data: ICompany }) {
       <p className="text-right italic font-light text-gray-400">{period}</p>
       <p
         className={`text-base text-gray-500${i18n.language === 'zh' ? ' text-justify' : ''}`}
+        style={{ lineHeight: '1.75rem' }}
         dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(description) }}
       >
       </p>
@@ -47,7 +48,7 @@ const Work = memo(function Work() {
 
   const { t } = useTranslation();
 
-  const companies: ICompany[] = t('content.work.companies', { returnObjects: true }) ?? [];
+  const companies: ICompany[] = (t('content.work.companies', { returnObjects: true }) as ICompany[]) ?? [];
 
   return (
     <section className="relative fade-in">

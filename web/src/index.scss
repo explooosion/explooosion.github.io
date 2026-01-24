@@ -1,15 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @import 'styles';
 
-@layer base {
-  html, body {
-    @apply text-gray-700 font-sans text-base z-0;
-    -webkit-font-smoothing: subpixel-antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+@theme {
+  /* Color palette */
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-700: #374151;
+  --color-gray-900: #111827;
+  
+  /* Border colors */
+  --color-gray-200: #e5e7eb;
+  
+  /* Font configuration */
+  --font-family-sans: 'Taipei Sans TC Beta', 'Roboto', -apple-system, monospace, Arial, sans-serif;
+  --font-size-base: 14px;
+  
+  /* Breakpoints */
+  --breakpoint-lg: 1024px;
+}
+
+html, body {
+  color: var(--color-gray-700);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-base);
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+hr {
+  border-color: #e5e7eb;
+}
+
+/* Custom text color utilities */
+.text-gray-400 {
+  color: #9ca3af;
+}
+
+.text-gray-500 {
+  color: #6b7280;
+}
+
+.text-gray-900 {
+  color: #111827;
 }
