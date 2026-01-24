@@ -5,10 +5,20 @@
 @import 'styles';
 
 @theme {
-  /* Base styles */
+  /* Color palette */
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
   --color-gray-700: #374151;
+  --color-gray-900: #111827;
+  
+  /* Border colors */
+  --color-gray-200: #e5e7eb;
+  
+  /* Font configuration */
   --font-family-sans: 'Taipei Sans TC Beta', 'Roboto', -apple-system, monospace, Arial, sans-serif;
   --font-size-base: 14px;
+  
+  /* Breakpoints */
   --breakpoint-lg: 1024px;
 }
 
@@ -18,4 +28,21 @@ html, body {
   font-size: var(--font-size-base);
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+hr {
+  border-color: #e5e7eb;
+}
+
+/* Custom text color utilities */
+.text-gray-400 {
+  color: #9ca3af;
+}
+
+.text-gray-500 {
+  color: #6b7280;
+}
+
+.text-gray-900 {
+  color: #111827;
 }
